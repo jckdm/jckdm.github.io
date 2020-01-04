@@ -24,6 +24,11 @@ body {
 
 a:hover, .galleries:hover, .bigwork:hover, .highlite:hover { text-decoration: underline; cursor: auto; }
 
+a[href^="tel"] {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
 html { background-color: #00008B; width: 75%; }
 
 .invisible { color: transparent; }
