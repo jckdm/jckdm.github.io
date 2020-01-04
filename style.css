@@ -27,7 +27,7 @@ body {
 
 a:hover, .galleries:hover, .bigwork:hover, .highlite:hover { text-decoration: underline; cursor: auto; }
 
-html { background-color: #000000; width: 75%; }
+html { background-color: #000000; width: 67.5%; }
 
 .invisible { color: transparent; }
 .strike { text-decoration: line-through; color: #FFC0CB; }
