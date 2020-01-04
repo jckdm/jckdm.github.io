@@ -1,3 +1,8 @@
+window.onload = function() {
+	document.body.style.backgroundColor = "#00008B";
+	document.getElementById('html').style.background = "#000000";
+};
+
 (function() {
 
 	// Declaring carimages so they can be used

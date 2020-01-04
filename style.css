@@ -1,46 +1,84 @@
-* {
-    font-family: Helvetica;
-    -moz-user-select: none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    box-sizing: border-box;
-    cursor: auto;
-}
-
 input, input:before, input:after {
     -webkit-user-select: initial;
     -khtml-user-select: initial;
     -moz-user-select: initial;
     -ms-user-select: initial;
     user-select: initial;
-   }
-
-#header {
-   padding-left: 20px;
-   font-size: 40px;
-   letter-spacing: 4px;
 }
 
 body {
-  color: #FFFFFF;
-  background-color: #000000;
+   color: #FFFFFF;
+   background-color: #000000;
+   font-family: Helvetica;
+   -moz-user-select: none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+   box-sizing: border-box;
+   cursor: auto;
+   padding-bottom: 8.5vh;
+   width: 120%;
+   border: 1.5px solid #0000FF;
 }
 
-#check1, #check2 { width: 30px; text-align: center; }
-#answer { width: 40px; text-align: center; }
+a:hover, .galleries:hover, .bigwork:hover, .highlite:hover { text-decoration: underline; cursor: auto; }
+
+html { background-color: #00008B; width: 75%; }
+
+.invisible { color: transparent; }
+.strike { text-decoration: line-through; color: #FFC0CB; }
+.strike2 { text-decoration: line-through; color: #ADD8E6; }
+
+.wrapper {
+    width: 23.85vw;
+    padding: 0vw 1.5vw 1.5vw 1.5vw;
+    font-size: calc(14px + 1.9vw);
+    letter-spacing: 0.285vw;
+    line-height: 120%;
+}
+
+#header {
+    padding-left: calc(15px + 0.5vw);
+    font-size: calc(22px + 1.3vw);
+    letter-spacing: 0.285vw;
+    line-height: 120%;
+}
 
 .left {
-     padding-top: 5%;
-     width: 40%;
+     display: none;
+     padding-top: 3vh;
+     width: 20%;
      margin: 0 auto;
+}
+
+#check1 {
+  width: calc(1.5vw + 15px);
+  text-align: center;
+  font-size: 13px;
+  margin-right: 0.5vw;
+}
+
+#check2 {
+  width: calc(1.5vw + 15px);
+  text-align: center;
+  font-size: 13px;
+  margin-right: 0.5vw;
+  margin-left: 0.5vw;
+}
+
+#answer {
+  width: calc(1.5vw + 20px);
+  text-align: center;
+  font-size: 13px;
+  margin-left: 0.5vw;
+  margin-right: 0.5vw;
 }
 
 .back {
     width: 200px;
-    padding-top: 70px;
-    padding-left: 20px;
+    padding-top: calc(20px + 5vh);
+    padding-left: 1.5vw;
 }
 
 .top {
@@ -53,28 +91,16 @@ body {
 
 .main { float: left; }
 
-.baritem {
-     text-decoration: none;
-     font-size: 200%;
-     letter-spacing: 1px;
-     border: none;
-}
-
 .bha {
      position: fixed;
-     text-decoration: none;
-     font-size: 300%;
+     font-size: calc(37.5px + 0.3vw + 0.6vh);
      color: #808080;
-     letter-spacing: 1px;
-     border: none;
+     letter-spacing: 0.125vw;
 }
 
 .bha:hover {
-    text-decoration: none;
-    font-size: 300%;
     color: #FFFFFF;
-    letter-spacing: 1px;
-    border: none;
+    text-decoration: underline;
 }
 
 .bha:hover:after {
@@ -87,44 +113,26 @@ body {
     font-size: 30%;
 }
 
-.bigWork {
-     text-decoration: none;
-     font-size: 300%;
-     letter-spacing: 1px;
-     border: none;
-}
-
 .soundscape {
-     max-width: 800px;
-     max-height: 500px;
+     max-width: 50vw;
      position: relative;
      left: 260px;
-     top: -32px;
-     right: 0;
-     bottom: 0;
+     top: -60px;
 }
 
 .sound {
-  text-align: left;
   display: block;
+  font-size: calc(7px + 0.6vw);
+  width: 26vw;
 }
 
-.audio { width: 350px; }
-
-#me {
-     max-width: 375px;
-     padding-left: 65px;
-     padding-right: 90px;
-     padding-bottom: 50px;
-}
-
-#abt { padding-right: 80px; }
-#about { font-size: 14px; }
-
-#checked { display: none; }
-
-#CV { display: none; }
-#RESUME { display: none; }
+/* annoyingly needed */
+.sound:hover { text-decoration: none; }
+#playlist { color: #FFFFFF; }
+#playlist:hover { color: pink; text-decoration: underline; }
+.audio { width: 25vw; }
+.about { font-size: 13px; }
+#CV, #RESUME, #checked { display: none; }
 
 div.absolute {
      position: relative;
@@ -151,9 +159,7 @@ span.verySmall {
      font-size: 10px;
 }
 
-.smallLetters {
-    font-size: 12px;
-}
+.smallLetters { font-size: 12px; }
 
 .reg-images {
      display: block;
@@ -163,21 +169,21 @@ span.verySmall {
 
 .images {
     position: absolute;
-    left:200px;
-    top:132px;
-    right:0px;
-    bottom:0px;
-    padding-left: 7%;
+    left: calc(35px + 12vw);
+    top: calc(77px + 7vh);
+    padding-left: 7vw;
 }
 
 .websiteImages { max-width: 100%; }
 
 .absolute2 {
     position: absolute;
-    top: 125px;
-    left: 66%;
-    width: 300px;
-    padding-bottom: 40px;
+    top: calc(75px + 7vh);
+    left: 66vw;
+    width: calc(20vw + 20px);
+    padding: 2.5vh 1.25vw 2.5vh 1.25vw;
+    background-color: #000000;
+    border: 1px solid #0000FF;
 }
 
 .container {
@@ -192,7 +198,7 @@ span.verySmall {
      min-width: 100%;
 }
  .text {
-     font-size: 14px;
+     font-size: calc(7px + 0.65vw);
      position: relative;
      top: 50%;
      left: 50%;
@@ -214,9 +220,7 @@ span.verySmall {
      background-color: #808080;
 }
 
-.container:hover .overlay {
-     opacity: 0.85;
-}
+.container:hover .overlay { opacity: 0.85; }
 
 #overlay {
      position: fixed;
@@ -235,50 +239,41 @@ span.verySmall {
      margin: auto;
 }
 
-/* really stupid custom right click welcome message */
-.custom-menu {
-    display: none;
-    z-index: 1000;
-    position: absolute;
-    overflow: hidden;
-    white-space: nowrap;
-    border-radius: 5px;
-}
+.babyspace { padding-bottom: calc(0.25vw + 0.25vh); }
+.smallspace { padding-bottom: 1.5vh; }
+.space { padding-bottom: calc(1vh + 1vw); }
+.space78 { padding-bottom: 3vh; }
+.homespace { padding-bottom: calc(0.5vh + 2.5vw); }
+.medspace { padding-bottom: calc(2vh + 1vw); }
+.endhigh { padding-bottom: calc(5px + 2.5vh + 1vw); }
+.gap { padding-bottom: calc(3.5vh + 2vw); }
 
-.custom-menu li {
-    padding: 8px;
-    font-size: 14px;
-    color: #808080;
-    list-style-type: none;
-}
+.highgap { padding-bottom: calc(7.5px + 6vh + 2vw); }
 
-.custom-menu:hover li {
-    padding: 8px;
-    font-size: 14px;
-    color: #FFFFFF;
-    list-style-type: none;
-}
+.bigspace { padding-bottom: calc(4.5vh + 2.5vw); }
+.endspace { padding-bottom: 7.5vh; }
+.inbspace { padding-bottom: calc(8vh - (6.5vh - 1vw)); }
+.hugespace { padding-bottom: 15vh; }
+.hugerspace { padding-bottom: 8vh; }
 
 .in { padding-left: 2%; }
-.smallspace { padding-bottom: 2%; }
-.space { padding-bottom: 3%; }
-.space78 { padding-bottom: 4%; }
-.homespace { padding-bottom: 5%; }
-.medspace { padding-bottom: 6%; }
-.gap { padding-bottom: 7%; }
-.bigspace { padding-bottom: 8%; }
-.endspace { padding-bottom: 10%; }
-.hugespace { padding-bottom: 20%; }
-
 .indent { padding-right: 5%; }
 
 /* Create two equal columns that floats next to each other */
-.column {
+.column1 {
   float: left;
-  width: 50%;
+  width: 40%;
   padding-top: 20px;
-  padding-left: 25px;
-  padding-right: 30px;
+  padding-left: calc(10px + 0.5vw);
+  padding-right: calc(10px + 1.5vw);
+}
+
+.column2 {
+  float: left;
+  width: 40%;
+  padding-top: 15px;
+  padding-left: calc(10px + 0.5vw);
+  padding-right: calc(10px + 1.5vw);
 }
 
 .row:after {
@@ -291,7 +286,7 @@ span.verySmall {
      display: none;
      position: fixed;
      z-index: 1;
-     padding-top: 100px;
+     padding-top: calc(52.5px + 4vh);
      left: 0;
      top: 0;
      width: 100%;
@@ -300,120 +295,112 @@ span.verySmall {
      background-color: #000000;
 }
 .modal-content {
-     background-color: #0000FF;
+     background-color: #00008B;
      margin: auto;
-     padding: 20px;
-     width: 80%;
+     padding: calc(10px + 1vw);
+     width: 70%;
+     overflow: auto;
+     max-height: calc(100vh - 210px);
+     overflow-y: auto;
+     border: 1.5px solid #0000FF;
 }
 
-.c_close, .cv_close, .a_close, .w_close, .p_close, .sw_close, .media_close, .bmedia_close, .pmedia_close, .swmedia_close {
+/* really stupid custom right click welcome message */
+.custom-menu {
+    display: none;
+    z-index: 1000;
+    position: absolute;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.custom-menu li {
+    padding: 8px;
+    font-size: calc(9px + 0.5vw);
+    color: #808080;
+    list-style-type: none;
+}
+
+/* abt unused, leaving for test */
+.ph_close, .arc_close, .abt_close, .c_close, .cv_close, .a_close, .w_close, .p_close, .sw_close {
      color: #808080;
      float: right;
-     font-size: 50px;
+     font-size: calc(37.5px + 0.75vw + 0.75vh);
      font-weight: bold;
 }
 
-.c_close:hover, .c_close:focus, .cv_close:hover, .cv_close:focus, .a_close:hover, .a_close:focus, .w_close:hover, .w_close:focus,
-.p_close:hover, .p_close:focus, .sw_close:hover, .sw_close:focus, .media_close:hover, .media_close:focus, .bmedia_close:hover, .bmedia_close:focus,
-.pmedia_close:hover, .bmedia_close:focus, .swmedia_close:hover, .bmedia_close:focus {
+.custom-menu:hover li, .ph_close:hover, .arc_close:hover, .c_close:hover, .cv_close:hover, .a_close:hover, .w_close:hover, .p_close:hover, .sw_close:hover {
      color: #FFFFFF;
      text-decoration: none;
 }
 
+.baritem {
+  position: absolute;
+  font-size: 2.5vw;
+  letter-spacing: 0.125vw;
+}
+
+.bigwork { font-size: 3.75vw; letter-spacing: 0.15vw; }
+
  .m_c {
      color: white;
+     /* weirdly needed the above when put on github */
      position: absolute;
      text-decoration: none;
-     font-size: 200%;
-     letter-spacing: 1px;
+     font-size: calc(15px + 0.8vw + 0.5vh);
+     padding-bottom: calc(1vh + 0.5vw);
+     letter-spacing: 0.075vw;
      border: none;
 }
  .m_cc {
      text-decoration: none;
-     font-size: 100%;
-     letter-spacing: 1px;
+     font-size: calc(8px + 0.5vw);
+     letter-spacing: 0.075vw;
      border: none;
 }
  .galleries {
+     padding-left: 4vw;
      position: absolute;
-     font-size: 200%;
-     letter-spacing: 1px;
-     border: none;
+     font-size: calc(15px + 0.8vw + 1vh);
+     letter-spacing: 0.075vw;
 }
 
-#dh:hover:after{
-     content:'\00a0\00a0\00a0[20]';
-     font-size: 50%;
+.highlite {
+    padding-left: 4vw;
+    position: absolute;
+    font-size: calc(10px + 0.9vw + 1.2vh);
+    width: 65vw;
+    letter-spacing: 0.075vw;
 }
-#d:hover:after{
-     content:'\00a0\00a0\00a0[12]';
-     font-size: 50%;
+
+.slash {
+  position: absolute;
+  font-size: calc(15px + 1.25vw);
 }
-#ew:hover:after{
-     content:'\00a0\00a0\00a0[13]';
-     font-size: 50%;
-}
-#sb:hover:after{
-     content:'\00a0\00a0\00a0[11]';
-     font-size: 50%;
-}
-#one:hover:after{
-     content:'\00a0\00a0\00a0[9]';
-     font-size: 50%;
-}
-#to:hover:after{
-     content:'\00a0\00a0\00a0[3]';
-     font-size: 50%;
-}
-#p:hover:after{
-     content:'\00a0\00a0\00a0[9]';
-     font-size: 50%;
-}
-#sp:hover:after{
-     content:'\00a0\00a0\00a0[8]';
-     font-size: 50%;
-}
-#f:hover:after{
-     content:'\00a0\00a0\00a0[6]';
-     font-size: 50%;
-}
-#sl:hover:after{
-     content:'\00a0\00a0\00a0[15]';
-     font-size: 50%;
-}
-#s:hover:after{
-     content:'\00a0\00a0\00a0[10]';
-     font-size: 50%;
-}
-#digi:hover:after{
-     content:'\00a0\00a0\00a0[8]';
-     font-size: 50%;
-}
-#draw:hover:after{
-     content:'\00a0\00a0\00a0[8]';
-     font-size: 50%;
-}
-#paint:hover:after{
-     content:'\00a0\00a0\00a0[8]';
-     font-size: 50%;
-}
-#sculpt:hover:after{
-    content:'\00a0\00a0\00a0[4]';
-    font-size: 50%;
-}
-#amb:hover:after{
-     content:'\00a0\00a0\00a0[7]';
-     font-size: 50%;
-}
-#sa:hover:after{
-     content:'\00a0\00a0\00a0[8]';
-     font-size: 50%;
+
+.slash:hover { text-decoration: none; }
+
+.archive {
+    font-size: calc(15px + 1.25vw);
+    letter-spacing: 0.075vw;
+    text-align: center;
+    margin: auto;
+    width: 50%;
 }
 
 /* Mobile -- Portrait and Landscape 5/5s/5c/SE */
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
 
-  * {
+  .wrapper {
+    width: 50vw;
+    font-size: calc(20px + 1.4vw);
+    letter-spacing: 0.285vw;
+    padding: 0.75vw 0vw 0vw 4vw;
+    line-height: 120%;
+  }
+
+   body {
+     color: #FFFFFF;
      font-family: Helvetica;
      -moz-user-select: none;
      -khtml-user-select: none;
@@ -422,32 +409,52 @@ span.verySmall {
      user-select: none;
    }
 
-   body { color: #FFFFFF; }
+   .bigwork { font-size: calc(25px + 3vw); letter-spacing: 0.15vw; }
 
-   .column {
-     width: 100%;
-     padding-left: 10px;
-     padding-right: 10px;
+   #abt {
+     padding-right: 20px;
+     padding-bottom: 250px;
    }
 
-     #header {
-         padding-left: 18px;
-         font-weight: 250;
-         font-size: 28px;
-         letter-spacing: 4px;
+   .about { font-size: 12px; line-height: 120%; }
+
+   .column1 {
+     float: left;
+     width: 40%;
+     padding-top: 22.5px;
+     padding-left: calc(3px + 0.5vw);
+     padding-right: calc(10px + 1.5vw);
+   }
+
+   .column2 {
+     float: left;
+     width: 40%;
+     padding-top: 12.5px;
+     padding-left: calc(10px + 0.5vw);
+     padding-right: calc(10px + 1.5vw);
+   }
+
+
+    #header {
+        padding-left: calc(10px + 0.5vw);
+        font-size: calc(12px + 1.25vw);
+        letter-spacing: 0.285vw;
+        line-height: calc(100% + 0.75vh);
     }
+
      .left {
          margin-left: 15px;
          width: 200px;
          font-size: 12px;
          padding-top: 70px;
     }
-     .back {
-         width: 200px;
-         padding-left: 18px;
-         padding-bottom: 30px;
-         font-size: 15px;
+
+    .back {
+        width: 200px;
+        padding-top: calc(20px + 5vh);
+        padding-left: 2.5vw;
     }
+
      .top {
          position: absolute;
          left:0;
@@ -466,27 +473,10 @@ span.verySmall {
 
     .bha {
         position: fixed;
-        text-decoration: none;
-        font-size: 500%;
+        font-size: calc(30px + 0.3vw + 0.6vh);
         color: #808080;
-        letter-spacing: 1px;
-        border: none;
+        letter-spacing: 0.125vw;
    }
-
-   .bha:hover {
-       text-decoration: none;
-       font-size: 500%;
-       color: #FFFFFF;
-       letter-spacing: 1px;
-       border: none;
-   }
-
-   #abt {
-     padding-right: 20px;
-     padding-bottom: 250px;
-   }
-
-   #about { font-size: 13px; }
 
      div.absolute {
          position: relative;
@@ -498,34 +488,56 @@ span.verySmall {
          max-width: 240px;
     }
      span.big {
-         line-height: 150%;
-         font-size: 14px;
+         line-height: 100%;
+         font-size: 10px;
     }
      span.bigLetters {
          line-height: 150%;
          font-size: 30px;
     }
+    /* dont think im using this or the above? */
      span.verySmall {
          line-height: 150%;
          font-size: 20px;
     }
     .smallLetters {
-        font-size: 14px;
+        font-size: 9px;
    }
-     .images {
-         position: absolute;
-         left:178px;
-         top:92px;
-         right:0;
-         bottom:0;
-         padding-left: 7%;
+
+   .reg-images {
+        display: block;
+        max-width: 50%;
+        min-width: 50%;
+   }
+
+    .images {
+        position: absolute;
+        left: calc(15px + 10vw);
+        top: calc(42.5px + 7vh);
+        padding-left: 7vw;
     }
+
      .absolute2 {
-         position: absolute;
-         top: 90px;
-         left: 70%;
-         width: 280px;
-         padding-bottom: 40px;
+        position: absolute;
+        top: calc(42.5px + 7vh);
+        left: 63.5vw;
+        width: calc(20vw + 28px);
+        padding: 1.5vh 1.75vw 1.5vh 1.75vw;
+        background-color: #000000;
+        border: 1px solid #0000FF;
+    }
+
+    .soundscape {
+         max-width: 20vw;
+         position: relative;
+         left: 27.5vw;
+         top: -13vh;
+    }
+
+    .sound {
+      display: block;
+      font-size: calc(7px + 0.6vw);
+      width: 30vw;
     }
 
     .space { padding-bottom: 8%; }
@@ -534,65 +546,39 @@ span.verySmall {
     .bigspace { padding-bottom: 12%; }
     .endspace { padding-bottom: 14%; }
     .hugespace { padding-bottom: 24%; }
-    .gap { padding-bottom: 11%; }
+    .gap { padding-bottom: calc(5vh + 2vw); }
+
+    .highgap { padding-bottom: calc(10px + 5vh + 2vw); }
+    .medspace { padding-bottom: calc(5px + 2vh + 1vw); }
+    .endhigh { padding-bottom: calc(8px + 2.25vh + 1vw); }
+
     .mobilespace { padding-bottom: 8%; }
     .mobilesmallspace { padding-bottom: 2%; }
     .mobile7 { padding-bottom: 0%; }
 
+    .inbspace { padding-bottom: 3vh; }
+    .homespace { padding-bottom: 3vh; }
+
+
     .in { padding-left: 2%; }
     .indent { padding-right: 5%; }
 
-    .c_close, .cv_close {
+    .ph_close, .arc_close, .abt_close, .c_close, .cv_close, .a_close, .w_close, .p_close, .sw_close, .media_close, .bmedia_close, .pmedia_close, .swmedia_close {
          color: #808080;
          float: right;
-         font-size: 30px;
+         font-size: calc(30px + 0.75vw + 0.75vh);
          font-weight: bold;
-    }
-
-    .w_close, .p_close, .sw_close, .media_close, .bmedia_close, .pmedia_close, .swmedia_close {
-        color: #808080;
-        float: right;
-        font-size: 30px;
-        font-weight: bold;
-        padding-left: 25px;
-   }
-
-     .c_close:hover, .c_close:focus {
-         color: #FFFFFF;
-         text-decoration: none;
-    }
-     .cv_close:hover, .cv_close:focus {
-         color: #FFFFFF;
-         text-decoration: none;
-    }
-     .a_close {
-         color: #808080;
-         float: right;
-         font-size: 30px;
-         font-weight: bold;
-         padding-bottom: 390px;
-    }
-
-     .a_close:hover, .a_close:focus, .w_close:hover, .w_close:focus, .p_close:hover, .p_close:focus, .sw_close:hover, .sw_close:focus,
-     .media_close:hover, .media_close:focus, .bmedia_close:hover, .bmedia_close:focus, .pmedia_close:hover, .bmedia_close:focus, .swmedia_close:hover, .bmedia_close:focus {
-         color: #FFFFFF;
-         text-decoration: none;
     }
 
     .m_c {
-        position: absolute;
-        text-decoration: none;
-        font-size: 135%;
-        color: white;
-        letter-spacing: 1px;
-        border: none;
+      color: white;
+      position: absolute;
+      font-size: calc(13px + 0.8vw + 0.5vh);
+      letter-spacing: 0.075vw;
    }
     .m_cc {
-        text-decoration: none;
-        font-size: 80%;
-        letter-spacing: 1px;
-        border: none;
-        color: white;
+      font-size: calc(9px + 0.5vw);
+      letter-spacing: 0.075vw;
    }
 
     .modal {
@@ -609,7 +595,7 @@ span.verySmall {
         background-color: #000000;
       }
     .modal-content {
-        background-color: #0000FF;
+        background-color: #00008B;
         color: white;
         margin: auto;
         padding: 20px;
@@ -617,21 +603,32 @@ span.verySmall {
         overflow-y: auto;
    }
 
-   .galleries {
-       position: absolute;
-       font-size: 200%;
-       letter-spacing: 1px;
-       border: none;
-  }
+  .galleries {
+      padding-left: 4vw;
+      position: absolute;
+      font-size: calc(12px + 0.8vw + 1vh);
+      letter-spacing: 0.075vw;
+ }
 
-  #mybMediaBtn { display: none; }
+ .highlite {
+     padding-left: 6vw;
+     padding-bottom: 5vw;
+     font-size: calc(7px + 0.9vw + 1vh);
+     width: 65vw;
+     letter-spacing: 0.075vw;
+ }
 
-  #mypMediaBtn { display: none; }
+ .slash {
+   position: absolute;
+   font-size: calc(7px + 0.9vw + 1vh);
+ }
 
-  #myswMediaBtn { display: none; }
+ .archive {
+     font-size: calc(15px + 1.25vw);
+     letter-spacing: 0.075vw;
+     text-align: center;
+     margin: auto;
+     width: 50%;
+ }
 
-  #backhome:hover:after {
-      content: ' home';
-      font-size: 30%;
-  }
 }
