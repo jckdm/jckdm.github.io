@@ -491,7 +491,7 @@ span.verySmall {
          font-size: 10px;
     }
      span.bigLetters {
-         line-height: 150%;
+         line-height: 120%;
          font-size: 30px;
     }
     /* dont think im using this or the above? */
