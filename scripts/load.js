@@ -1,5 +1,4 @@
 window.onload = setTimeout(function() {
-
   var text = "jack adam is ... an artist",
       soFar = "";
 

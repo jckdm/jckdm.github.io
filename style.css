@@ -8,7 +8,7 @@ input, input:before, input:after {
 
 body {
    color: #FFFFFF;
-   background-color: #000000;
+   background-color: #00008B;
    font-family: Helvetica;
    -moz-user-select: none;
    -khtml-user-select: none;
@@ -22,9 +22,12 @@ body {
    border: 1.5px solid #0000FF;
 }
 
+#body2 { background-color: #000000; }
+#html2 { background-color: #00008B; }
+
 a:hover, .galleries:hover, .bigwork:hover, .highlite:hover { text-decoration: underline; cursor: auto; }
 
-html { background-color: #00008B; width: 75%; }
+html { background-color: #000000; width: 75%; }
 
 .invisible { color: transparent; }
 .strike { text-decoration: line-through; color: #FFC0CB; }
