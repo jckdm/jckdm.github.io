@@ -425,7 +425,7 @@ span.verySmall {
    .column1 {
      float: left;
      width: 40%;
-     padding-top: 22.5px;
+     padding-top: 20px;
      padding-left: calc(3px + 0.5vw);
      padding-right: calc(10px + 1.5vw);
    }
