@@ -246,4 +246,6 @@ ul:after { clear: both; }
 .bigspace { padding-bottom: calc(4.5vh + 2.5vw); }
 .hugespace { padding-bottom: 15vh; }
 
+#arrSpace { padding-bottom: 2.75vw; }
+
 a:hover, .galleries:hover, .highlite:hover { text-decoration: underline; cursor: auto; }
