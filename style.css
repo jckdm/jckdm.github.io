@@ -25,7 +25,7 @@ body {
 #body2 { background-color: #000000; }
 #html2 { background-color: #00008B; }
 
-a:hover, .galleries:hover, .bigwork:hover, .highlite:hover { text-decoration: underline; cursor: auto; }
+a:hover, .statement:hover, .galleries:hover, .bigwork:hover, .highlite:hover { text-decoration: underline; cursor: auto; }
 
 html { background-color: #000000; width: 67.5%; }
 
@@ -216,6 +216,12 @@ span.verySmall {
      text-align: center;
 }
 
+.statement {
+    text-decoration: none;
+    font-size: calc(8px + 0.75vw + 0.4vh);
+    color: white;
+}
+
 .overlay {
      position: absolute;
      top: 0;
@@ -403,7 +409,7 @@ span.verySmall {
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
 
   .wrapper {
-    width: 50vw;
+    width: 50.5vw;
     font-size: calc(20px + 1.4vw);
     letter-spacing: 0.285vw;
     padding: 0.75vw 0vw 0vw 4vw;
