@@ -121,8 +121,8 @@ html { background-color: #000000; width: 67.5%; }
 .soundscape {
      max-width: 50vw;
      position: relative;
-     left: 260px;
-     top: -60px;
+     left: calc(40px + 17.5vw);
+     top: -55px;
 }
 
 .sound {
