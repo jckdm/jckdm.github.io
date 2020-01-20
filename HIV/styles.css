@@ -30,10 +30,11 @@ body { background-color: black; }
   -webkit-box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
   box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
   pointer-events: none;
+  z-index: 1000;
 }
 
 #tooltip.hidden { display: none; }
-#tooltip p { margin: 0; font-size: 12px; line-height: 20px; }
+#tooltip p { margin: 0; color: black; font-size: 12px; line-height: 20px; }
 
 .modal {
   display: none;
