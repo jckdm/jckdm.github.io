@@ -36,9 +36,9 @@ html { background-color: #000000; width: 67.5%; }
 #arrSpace { padding-bottom: 2.75vw; }
 
 .wrapper {
-    width: calc(15px + 25vw);
+    width: calc(25px + 25vw);
     padding: 0vw 0vw 0vw 1.5vw;
-    font-size: calc(14px + 1.9vw);
+    font-size: calc(14px + 1.75vw);
     letter-spacing: 0.285vw;
     line-height: 120%;
 }
