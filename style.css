@@ -36,7 +36,7 @@ html { background-color: #000000; width: 67.5%; }
 #arrSpace { padding-bottom: 2.75vw; }
 
 .wrapper {
-    width: 25vw;
+    width: calc(15px + 25vw);
     padding: 0vw 0vw 0vw 1.5vw;
     font-size: calc(14px + 1.9vw);
     letter-spacing: 0.285vw;
@@ -296,6 +296,7 @@ span.verySmall {
   display: table;
   clear: both;
 }
+
 
 .modal {
      display: none;
