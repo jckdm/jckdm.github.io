@@ -38,5 +38,3 @@ for(var i = 0; i < aTags.length; i++){
         window.location.replace(ele.getAttribute('data-href'));
     });
 }
-
-document.addEventListener('contextmenu', event => event.preventDefault());

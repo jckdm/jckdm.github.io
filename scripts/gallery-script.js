@@ -37,6 +37,4 @@ $(function() {
           window.location.replace(ele.getAttribute('data-href'));
       });
   }
-
-  document.addEventListener('contextmenu', event => event.preventDefault());
 })
