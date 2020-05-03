@@ -390,7 +390,10 @@ span.smallLetters { font-size: calc(8px + 0.15vh + 0.125vw); }
     padding-right: calc(1.25vw + 10px);
     padding-left: calc(0.5vw + 3px);
   }
-  .column2 { padding-right: calc(1vw + 8px); }
+  .column2 {
+    padding-top: 5px;
+    padding-right: calc(1vw + 8px);
+  }
 
   .left {
     margin-left: 15px;
