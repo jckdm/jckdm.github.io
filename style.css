@@ -376,6 +376,7 @@ span.smallLetters { font-size: calc(8px + 0.15vh + 0.125vw); }
     padding: 0.75vw 0vw 0vw 4vw;
   }
 
+  .about { line-height: 80%; }
   .bigwork { font-size: calc(3vw + 25px); }
 
   .column1 {
@@ -404,13 +405,15 @@ span.smallLetters { font-size: calc(8px + 0.15vh + 0.125vw); }
     padding-left: calc(7.5px + 0.5vw);
   }
 
+  .bha:hover, #backhome:hover { text-decoration: none; }
+
   .bha:hover:after, #backhome:hover:after {
     content: '';
     font-size: 0px;
   }
 
   .ph_close, .arc_close, .c_close, .cv_close, .a_close, .w_close, .p_close, .sw_close, .media_close, .bmedia_close, .pmedia_close, .swmedia_close {
-     font-size: calc(30px + 0.75vw + 0.75vh);
+     font-size: calc(30px + 0.75vw + 1vh);
    }
 
   #arrSpace { padding-bottom: 1.5vh; }
