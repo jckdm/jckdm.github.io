@@ -387,7 +387,7 @@ span.smallLetters { font-size: calc(8px + 0.15vh + 0.125vw); }
   .about { line-height: 80%; }
 
   .column1 { padding: 0 calc(1.25vw + 10px) 0 calc(0.5vw + 3px); }
-  .column2 { padding: 17.5px calc(1vw + 8px) 0 0; }
+  .column2 { padding-right: calc(1vw + 8px); }
 
   .left {
     margin-left: 15px;
