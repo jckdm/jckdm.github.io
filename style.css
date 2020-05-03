@@ -34,7 +34,7 @@ html { background-color: #000000; width: 67.5%; }
 .strike { text-decoration: line-through; color: #FFC0CB; }
 .strike2 { text-decoration: line-through; color: #ADD8E6; }
 
-#arrSpace { padding-bottom: 2.75vw; }
+#arrSpace { padding-bottom: 5vh; }
 
 .wrapper {
   width: calc(25px + 25vw);
@@ -46,7 +46,7 @@ html { background-color: #000000; width: 67.5%; }
 
 #header {
   padding-left: calc(15px + 0.5vw);
-  font-size: calc(22px + 1.3vw);
+  font-size: calc(13px + 1.25vw + 0.3vh);
   letter-spacing: 0.285vw;
   line-height: 120%;
 }
@@ -82,19 +82,11 @@ html { background-color: #000000; width: 67.5%; }
 }
 
 .back {
-  width: 200px;
-  padding-top: calc(20px + 5vh);
-  padding-left: 1.5vw;
+  padding-top: calc(50px + 3vh);
+  padding-left: calc(10px + 0.5vw)
 }
 
-.top {
-  position: absolute;
-  left: 300px;
-  right: 0;
-  top: 128px;
-  height: 110px;
-}
-
+/* helps sound page not be super long */
 .main { float: left; }
 
 .bha {
@@ -137,15 +129,18 @@ html { background-color: #000000; width: 67.5%; }
 #playlist { color: #FFFFFF; }
 #playlist:hover { color: pink; text-decoration: underline; }
 .audio { width: 25vw; }
-.about { font-size: 13px; }
+.about { font-size: calc(8px + 0.2vw + 0.2vh); }
 #CV, #RESUME, #checked { display: none; }
 
 span.big {
-  line-height: 145%;
-  font-size: 14px;
+  font-size: calc(8px + 0.25vh + 0.2vw);
+  line-height: calc(70% + 1vh + 0.25vw);
 }
 
-.smallLetters { font-size: 12px; }
+span.smallLetters {
+  font-size: calc(8px + 0.15vh + 0.125vw);
+  line-height: calc(70% + 0.75vh + 0.25vw);
+}
 
 .reg-images {
   display: block;
@@ -155,22 +150,20 @@ span.big {
 
 .images {
   position: absolute;
-  left: calc(35px + 12vw);
-  top: calc(77px + 7vh);
+  top: calc(75px + 7vh);
+  left: calc(25px + 12vw);
   padding-left: 7vw;
 }
 
 #frame { max-width: 100%; }
 #iframeContainer2 { max-width: 50%; }
 
-.websiteImages { max-width: 100%; }
-
 .absolute2 {
   position: absolute;
   top: calc(75px + 7vh);
   left: 66vw;
-  width: calc(20vw + 20px);
-  padding: 2.5vh 1.25vw 2.5vh 1.25vw;
+  width: calc(20px + 20vw);
+  padding: calc(1.5vh + 0.5vw) calc(1.25vw + 0.25vh) calc(1.5vh + 0.5vw) calc(1.25vw + 0.25vh);
   background-color: #000000;
   border: 1px solid #0000FF;
 }
@@ -203,6 +196,7 @@ span.big {
   color: white;
 }
 
+/* text on images */
 .overlay {
   position: absolute;
   top: 0;
@@ -217,6 +211,7 @@ span.big {
 
 .container:hover .overlay { opacity: 0.85; }
 
+/* fullscreen images */
 #overlay {
   position: fixed;
   top: 0;
@@ -364,7 +359,7 @@ span.big {
 
 .slash {
   position: absolute;
-  font-size: calc(13px + 1.5vw);
+  font-size: calc(7px + 1vw + 1.2vh);
 }
 
 .slash:hover { text-decoration: none; }
@@ -385,7 +380,6 @@ span.big {
     padding: 0.75vw 0vw 0vw 4vw;
   }
 
-  #arrSpace { padding-bottom: 1vw; }
   .bigwork { font-size: calc(25px + 3vw); }
   .about { font-size: 12px; line-height: 120%; }
 
@@ -394,7 +388,10 @@ span.big {
     padding-right: calc(10px + 1.5vw);
   }
 
-  .column2 { padding-top: 12.5px; }
+  .column2 {
+    padding-top: 12.5px;
+    padding-right: calc(8.5px + 1vw);
+  }
 
   #header {
     padding-left: calc(10px + 0.5vw);
@@ -409,11 +406,16 @@ span.big {
     padding-top: 70px;
   }
 
-  .back { padding-left: 2.5vw; }
-  .top { left: 0; }
+  .back {
+    padding-top: calc(15px + 5.5vh);
+    padding-left: calc(7.5px + 0.5vw);
+  }
   .bha { font-size: calc(30px + 0.3vw + 0.6vh); }
-  span.big { font-size: 10px; }
-  .smallLetters { font-size: 9px; }
+
+  span.big {
+    font-size: calc(8px + 0.2vh + 0.1vw);
+    line-height: calc(65% + 0.5vh + 0.1vw);
+  }
 
   .images {
     left: calc(15px + 10vw);
@@ -424,7 +426,6 @@ span.big {
     top: calc(42.5px + 7vh);
     left: 63.5vw;
     width: calc(20vw + 28px);
-    padding: 1.5vh 1.75vw 1.5vh 1.75vw;
   }
 
   .soundscape {
@@ -441,7 +442,7 @@ span.big {
   .inbspace { padding-bottom: calc(8vh - (6vh - 1vw)); }
   .space { padding-bottom: calc(1.5vh + 1vw); }
 
-  .ph_close, .arc_close, .abt_close, .c_close, .cv_close, .a_close, .w_close, .p_close, .sw_close, .media_close, .bmedia_close, .pmedia_close, .swmedia_close {
+  .ph_close, .arc_close, .c_close, .cv_close, .a_close, .w_close, .p_close, .sw_close, .media_close, .bmedia_close, .pmedia_close, .swmedia_close {
        font-size: calc(30px + 0.75vw + 0.75vh);
   }
 
@@ -480,7 +481,7 @@ span.big {
   .highlite {
     padding-left: 6vw;
     padding-bottom: 5vw;
-    font-size: calc(7px + 0.9vw + 1vh);
+    font-size: calc(6px + 0.9vw + 0.9vh);
   }
-  .slash { font-size: calc(7px + 0.9vw + 1vh); }
+  .slash { font-size: calc(6px + 0.9vw + 0.9vh); }
 }
