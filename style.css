@@ -26,34 +26,33 @@ body {
 #html2 { background-color: #00008B; }
 
 a, a:visited { text-decoration: none; }
-a:hover, .statement:hover, .galleries:hover, .bigwork:hover, .highlite:hover { text-decoration: underline; cursor: auto; }
+.statement:hover, .galleries:hover, .bigwork:hover, .highlite:hover { text-decoration: underline; cursor: auto; }
 
 html { background-color: #000000; width: 67.5%; }
 
 .invisible { color: transparent; }
-.strike { text-decoration: line-through; color: #FFC0CB; }
-.strike2 { text-decoration: line-through; color: #ADD8E6; }
-
-#arrSpace { padding-bottom: 5vh; }
+.strike, .strike2 { text-decoration: line-through; }
+.strike { color: #FFC0CB; }
+.strike2 { color: #ADD8E6; }
 
 .wrapper {
-  width: calc(25px + 25vw);
+  width: calc(25px + 26vw);
   padding-left: 1.5vw;
-  font-size: calc(14px + 1.75vw);
+  font-size: calc(5px + 2vw + 0.75vh);
   letter-spacing: 0.285vw;
   line-height: 120%;
 }
 
 #header {
   padding-left: calc(15px + 0.5vw);
-  font-size: calc(13px + 1.25vw + 0.3vh);
+  font-size: calc(13px + 1.25vw);
   letter-spacing: 0.285vw;
   line-height: 120%;
 }
 
 .left {
   display: none;
-  padding-top: 3vh;
+  padding-top: calc(10px + 3vh);
   width: 20%;
   margin: 0 auto;
 }
@@ -230,23 +229,23 @@ span.smallLetters { font-size: calc(8px + 0.15vh + 0.125vw); }
   margin: auto;
 }
 
-.babyspace { padding-bottom: calc(0.25vw + 0.25vh); }
+#arrSpace { padding-bottom: 5vh; }
+/* misc. */
 .smallspace { padding-bottom: 1.5vh; }
+/* between paragraphs */
 .space { padding-bottom: calc(1vh + 1vw); }
+/* between images */
 .iSpace { padding-bottom: calc(2.5vh + 2.5vw); }
-.space78 { padding-bottom: 3vh; }
+/* btw home links */
 .homespace { padding-bottom: calc(0.5vh + 2.5vw); }
+/* used in nav */
 .medspace { padding-bottom: calc(2vh + 1vw); }
-.endhigh { padding-bottom: calc(5px + 2.5vh + 1vw); }
+/* used in nav */
 .gap { padding-bottom: calc(3.5vh + 2vw); }
-
+/* highlites */
 .highgap { padding-bottom: calc(7.5px + 6vh + 2vw); }
-
-.bigspace { padding-bottom: calc(4.5vh + 2.5vw); }
 .endspace { padding-bottom: 7.5vh; }
-.inbspace { padding-bottom: calc(8vh - (6.5vh - 1vw)); }
 .hugespace { padding-bottom: 15vh; }
-.hugerspace { padding-bottom: 8vh; }
 
 .in { padding-left: 2%; }
 .indent { padding-right: 5%; }
@@ -387,11 +386,8 @@ span.smallLetters { font-size: calc(8px + 0.15vh + 0.125vw); }
 
   .about { line-height: 80%; }
 
-  .column1 {
-    padding-left: calc(3px + 0.5vw);
-    padding-right: calc(10px + 1.25vw);
-  }
-  .column2 { padding-right: calc(8px + 1vw); }
+  .column1 { padding: 0 calc(1.25vw + 10px) 0 calc(0.5vw + 3px); }
+  .column2 { padding: 17.5px calc(1vw + 8px) 0 0; }
 
   .left {
     margin-left: 15px;
