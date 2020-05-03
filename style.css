@@ -375,7 +375,6 @@ span.smallLetters { font-size: calc(8px + 0.15vh + 0.125vw); }
   }
 
   .bigwork { font-size: calc(25px + 3vw); }
-  .about { font-size: 12px; line-height: 120%; }
 
   .column1 {
     padding-left: calc(3px + 0.5vw);
@@ -404,8 +403,8 @@ span.smallLetters { font-size: calc(8px + 0.15vh + 0.125vw); }
     padding-top: calc(15px + 5.5vh);
     padding-left: calc(7.5px + 0.5vw);
   }
-  .bha { font-size: calc(30px + 0.3vw + 0.8vh); }
-  #arrSpace { padding-bottom: 3vh; }
+
+  #arrSpace { padding-bottom: 1.5vh; }
 
   span.big { font-size: calc(8px + 0.2vh + 0.1vw); }
 
@@ -418,7 +417,6 @@ span.smallLetters { font-size: calc(8px + 0.15vh + 0.125vw); }
     top: calc(42.5px + 7vh);
     left: 63.5vw;
     width: calc(20vw + 28px);
-    line-height: calc(60% + 0.5vh + 0.1vw);
   }
 
   .soundscape {
@@ -434,11 +432,7 @@ span.smallLetters { font-size: calc(8px + 0.15vh + 0.125vw); }
   .homespace { padding-bottom: calc(2.5vh + 1.5vw); }
   .inbspace { padding-bottom: calc(8vh - (6vh - 1vw)); }
   .space { padding-bottom: calc(1.5vh + 1vw); }
-  .medspace { padding-bottom: calc(2.5vh + 0.75vw); }
-
-  .ph_close, .arc_close, .c_close, .cv_close, .a_close, .w_close, .p_close, .sw_close, .media_close, .bmedia_close, .pmedia_close, .swmedia_close {
-       font-size: calc(30px + 0.75vw + 0.75vh);
-  }
+  .medspace { padding-bottom: calc(3vh + 1vw); }
 
   .m_c {
     color: white;
