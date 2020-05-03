@@ -132,7 +132,7 @@ html { background-color: #000000; width: 67.5%; }
 
 .about {
   font-size: calc(8px + 0.2vw + 0.2vh);
-  line-height: calc(75% + 0.75vh + 0.1vw);
+  line-height: 120%;
 }
 
 #CV, #RESUME, #checked { display: none; }
@@ -421,7 +421,7 @@ span.smallLetters { font-size: calc(8px + 0.15vh + 0.125vw); }
      font-size: calc(32.5px + 1vw + 1vh);
    }
 
-  #arrSpace { padding-bottom: 1.5vh; }
+  #arrSpace { padding-bottom: 2vh; }
   span.big { font-size: calc(8px + 0.2vh + 0.1vw); }
   span.smallLetters { font-size: calc(8px + 0.1vh + 0.1vw); }
 
