@@ -296,7 +296,10 @@ span.smallLetters { font-size: calc(8px + 0.15vh + 0.125vw); }
   border: 1.5px solid #0000FF;
 }
 
-.abt-modal-content { max-height: calc(100vh - 210px); }
+.abt-modal-content {
+  line-height: 120%;
+  max-height: calc(100vh - 210px);
+}
 
 /* abt unused, leaving for test */
 .ph_close, .arc_close, .abt_close, .c_close, .cv_close, .a_close, .w_close, .p_close, .sw_close {
@@ -487,6 +490,8 @@ span.smallLetters { font-size: calc(8px + 0.15vh + 0.125vw); }
     width: 80%;
     overflow-y: auto;
   }
+
+  .abt-modal-content { line-height: 80%; }
 
   .galleries { font-size: calc(12px + 0.8vw + 1vh); }
 
