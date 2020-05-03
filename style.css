@@ -132,7 +132,7 @@ html { background-color: #000000; width: 67.5%; }
 
 .about {
   font-size: calc(8px + 0.2vw + 0.2vh);
-  line-height: 120%;
+  line-height: calc(75% + 0.75vh + 0.1vw);
 }
 
 #CV, #RESUME, #checked { display: none; }
@@ -418,11 +418,12 @@ span.smallLetters { font-size: calc(8px + 0.15vh + 0.125vw); }
   }
 
   .ph_close, .arc_close, .c_close, .cv_close, .a_close, .w_close, .p_close, .sw_close, .media_close, .bmedia_close, .pmedia_close, .swmedia_close {
-     font-size: calc(30px + 0.75vw + 1vh);
+     font-size: calc(32.5px + 1vw + 1vh);
    }
 
   #arrSpace { padding-bottom: 1.5vh; }
   span.big { font-size: calc(8px + 0.2vh + 0.1vw); }
+  span.smallLetters { font-size: calc(8px + 0.1vh + 0.1vw); }
 
   .images {
     top: calc(42.5px + 7vh);
