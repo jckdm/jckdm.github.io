@@ -26,7 +26,7 @@ body {
 #html2 { background-color: #00008B; }
 
 a, a:visited { text-decoration: none; }
-.statement:hover, .galleries:hover, .bigwork:hover, .highlite:hover { text-decoration: underline; cursor: auto; }
+.statement:hover, .galleries:hover, .baritem:hover, .archive:hover, .bigwork:hover, .highlite:hover { text-decoration: underline; cursor: auto; }
 
 html { background-color: #000000; width: 67.5%; }
 
@@ -446,7 +446,7 @@ span.smallLetters { font-size: calc(8px + 0.15vh + 0.125vw); }
   .gap { padding-bottom: calc(4.5vh + 2vw); }
   .homespace { padding-bottom: calc(2.5vh + 1.5vw); }
   .inbspace { padding-bottom: calc(8vh - (6vh - 1vw)); }
-  .space { padding-bottom: calc(1.5vh + 1vw); }
+  .space { padding-bottom: calc(2vh + 1vw); }
   .medspace { padding-bottom: calc(3.25vh + 1vw); }
 
   .m_c { font-size: calc(13px + 0.8vw + 0.5vh); }
