@@ -38,7 +38,7 @@ html { background-color: #000000; width: 67.5%; }
 
 .wrapper {
   width: calc(25px + 25vw);
-  padding: 0vw 0vw 0vw 1.5vw;
+  padding-left: 1.5vw;
   font-size: calc(14px + 1.75vw);
   letter-spacing: 0.285vw;
   line-height: 120%;
@@ -118,17 +118,19 @@ html { background-color: #000000; width: 67.5%; }
   top: -55px;
 }
 
+/* text below audio clips */
 .sound {
   display: block;
-  font-size: calc(7px + 0.6vw);
+  font-size: calc(8px + 0.25vh + 0.2vw);
   width: 26vw;
+  text-align: center;
 }
 
 /* annoyingly needed */
 .sound:hover { text-decoration: none; }
-#playlist { color: #FFFFFF; }
-#playlist:hover { color: pink; text-decoration: underline; }
-.audio { width: 25vw; }
+#playlist { color: pink; }
+#playlist:hover { color: hotpink; text-decoration: underline; }
+.audio { width: calc(25px + 27.5vw); }
 
 .about {
   font-size: calc(8px + 0.2vw + 0.2vh);
@@ -250,15 +252,7 @@ span.smallLetters { font-size: calc(8px + 0.15vh + 0.125vw); }
 .indent { padding-right: 5%; }
 
 /* Create two equal columns that floats next to each other */
-.column1 {
-  float: left;
-  width: 40%;
-  padding-top: 20px;
-  padding-left: calc(10px + 0.5vw);
-  padding-right: calc(10px + 1.5vw);
-}
-
-.column2 {
+.column1, .column2 {
   float: left;
   width: 40%;
   padding-top: 15px;
@@ -307,6 +301,7 @@ span.smallLetters { font-size: calc(8px + 0.15vh + 0.125vw); }
   float: right;
   font-size: calc(37.5px + 0.75vw + 0.75vh);
   font-weight: bold;
+  line-height: 100%;
 }
 
 .ph_close:hover, .arc_close:hover, .c_close:hover, .cv_close:hover, .a_close:hover, .w_close:hover, .p_close:hover, .sw_close:hover {
@@ -381,20 +376,7 @@ span.smallLetters { font-size: calc(8px + 0.15vh + 0.125vw); }
   .wrapper {
     width: 50.5vw;
     font-size: calc(1.4vw + 20px);
-    padding: 0.75vw 0vw 0vw 4vw;
-  }
-
-  .about { line-height: 80%; }
-  .bigwork { font-size: calc(3vw + 25px); }
-
-  .column1 {
-    padding-left: calc(3px + 0.5vw);
-    padding-right: calc(10px + 1.25vw);
-  }
-
-  .column2 {
-    padding-top: 12.5px;
-    padding-right: calc(8px + 1vw);
+    padding: 0.75vh 0vw 0vw 4vw;
   }
 
   #header {
@@ -402,6 +384,14 @@ span.smallLetters { font-size: calc(8px + 0.15vh + 0.125vw); }
     font-size: calc(12px + 1.25vw);
     line-height: calc(100% + 0.75vh);
   }
+
+  .about { line-height: 80%; }
+
+  .column1 {
+    padding-left: calc(3px + 0.5vw);
+    padding-right: calc(10px + 1.25vw);
+  }
+  .column2 { padding-right: calc(8px + 1vw); }
 
   .left {
     margin-left: 15px;
@@ -419,10 +409,6 @@ span.smallLetters { font-size: calc(8px + 0.15vh + 0.125vw); }
     content: '';
     font-size: 0px;
   }
-
-  .ph_close, .arc_close, .c_close, .cv_close, .a_close, .w_close, .p_close, .sw_close, .media_close, .bmedia_close, .pmedia_close, .swmedia_close {
-     font-size: calc(32.5px + 1vw + 1vh);
-   }
 
   #arrSpace { padding-bottom: 2vh; }
   span.big { font-size: calc(8px + 0.2vh + 0.1vw); }
@@ -461,44 +447,15 @@ span.smallLetters { font-size: calc(8px + 0.15vh + 0.125vw); }
   .space { padding-bottom: calc(1.5vh + 1vw); }
   .medspace { padding-bottom: calc(3.25vh + 1vw); }
 
-  .m_c {
-    color: white;
-    font-size: calc(13px + 0.8vw + 0.5vh);
-  }
+  .m_c { font-size: calc(13px + 0.8vw + 0.5vh); }
   .m_cc { font-size: calc(9px + 0.5vw); }
 
   .modal { padding-top: calc(25px + 10vh); }
-
-  .modal, .abt-modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    overflow-y: auto;
-    background-color: #000000;
-  }
   .abt-modal { padding-top: calc(25px + 4vh); }
-
-  .modal-content {
-    background-color: #00008B;
-    color: white;
-    margin: auto;
-    width: 80%;
-    overflow-y: auto;
-  }
-
+  .modal-content { width: 80%; }
   .abt-modal-content { line-height: 80%; }
 
   .galleries { font-size: calc(12px + 0.8vw + 1vh); }
-
-  .highlite {
-    padding-left: 6vw;
-    padding-bottom: 5vw;
-    font-size: calc(6px + 0.9vw + 0.9vh);
-  }
-  .slash { font-size: calc(6px + 0.9vw + 0.9vh); }
+  .highlite { padding: 0 0 5vw 6vw; }
+  .slash, .highlite { font-size: calc(6px + 0.9vw + 0.9vh); }
 }
