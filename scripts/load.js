@@ -74,7 +74,6 @@ function d(text, soFar, vis) {
         j -= 1;
       }
       next.innerHTML = " ... ";
-      q.innerHTML = "?";
     }, 50)
 
     setTimeout(function(){ document.querySelector('.left').style.display = "block"; }, 2000);

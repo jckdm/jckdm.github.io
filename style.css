@@ -25,6 +25,7 @@ body {
 #body2 { background-color: #000000; }
 #html2 { background-color: #00008B; }
 
+a, a:visited { text-decoration: none; }
 a:hover, .statement:hover, .galleries:hover, .bigwork:hover, .highlite:hover { text-decoration: underline; cursor: auto; }
 
 html { background-color: #000000; width: 67.5%; }
@@ -353,16 +354,17 @@ span.big {
 }
 
 .highlite {
+  color: #FFFFFF;
   padding-left: 4vw;
   position: absolute;
-  font-size: calc(10px + 0.9vw + 1.2vh);
+  font-size: calc(7px + 1vw + 1.2vh);
   width: 65vw;
   letter-spacing: 0.075vw;
 }
 
 .slash {
   position: absolute;
-  font-size: calc(15px + 1.25vw);
+  font-size: calc(13px + 1.5vw);
 }
 
 .slash:hover { text-decoration: none; }
