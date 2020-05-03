@@ -129,7 +129,12 @@ html { background-color: #000000; width: 67.5%; }
 #playlist { color: #FFFFFF; }
 #playlist:hover { color: pink; text-decoration: underline; }
 .audio { width: 25vw; }
-.about { font-size: calc(8px + 0.2vw + 0.2vh); }
+
+.about {
+  font-size: calc(8px + 0.2vw + 0.2vh);
+  line-height: 120%;
+}
+
 #CV, #RESUME, #checked { display: none; }
 
 span.big { font-size: calc(8px + 0.25vh + 0.2vw); }
