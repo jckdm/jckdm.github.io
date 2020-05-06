@@ -498,4 +498,5 @@ span.smallLetters { font-size: calc(8px + 0.15vh + 0.125vw); }
   .inbspace { padding-bottom: calc(8vh - (6vh - 1vw)); }
   .space { padding-bottom: calc(2vh + 1vw); }
   .medspace { padding-bottom: calc(3.25vh + 1vw); }
+  .endspace { padding-bottom: 5vh; }
 }
