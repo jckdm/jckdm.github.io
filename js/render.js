@@ -48,13 +48,16 @@ $(function() {
   var painting8 = '<i>Charlie-Gibbs Fracture Zone</i> <br> <br> 2018 <br> <br> 23 x 29 in. <br> <br> Wall paint, spray paint, acrylic paint on wood panel';
   var painting9 = '<i>El techo de tu cuarto</i> <br> <br> 2018 <br> <br> 18 x 48 in. <br> <br> Glass paint and block printing ink on paper';
 
-  for (var i = l; i >= 1; i--) {
+  for (var i = 1; i <= l; i++) {
     if (name == "sculpture" || name == "painting") {
-      $('.images').prepend('<div class="container"> <img class="hoverables" src="' + path + i + '.jpg"></img> <div class="overlay"> <div class="text">'
+      $('.images').append('<div class="container"> <img class="hoverables" src="' + path + i + '.jpg"></img> <div class="overlay"> <div class="text">'
       + eval(name + i) + '</div> </div> </div> <div class="iSpace"></div>');
     }
+    if (name == "digital" && i == l) {
+      $('.websiteImages').append('<iframe width="100%" frameborder="0" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/303889451&color=%23000000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe> <div class="iSpace"></div> <iframe width="100%" frameborder="0" src="https://player.vimeo.com/video/198531171?color=ffffff&byline=0&portrait=0" allowfullscreen></iframe>');
+    }
     else {
-      $('.websiteImages').prepend('<img class="reg-images" src="' + path + i + '.jpg"></img> <div class="iSpace"></div>');
+      $('.websiteImages').append('<img class="reg-images" src="' + path + i + '.jpg"></img> <div class="iSpace"></div>');
     }
   }
 })

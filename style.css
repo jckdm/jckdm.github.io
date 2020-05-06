@@ -174,9 +174,6 @@ span.smallLetters { font-size: calc(8px + 0.15vh + 0.125vw); }
   padding-left: 7vw;
 }
 
-#frame { max-width: 100%; }
-#iframeContainer2 { max-width: 50%; }
-
 .sidebar {
   position: absolute;
   top: calc(65px + 8.5vh);
