@@ -178,7 +178,6 @@ span.smallLetters { font-size: calc(8px + 0.15vh + 0.125vw); }
 #iframeContainer2 { max-width: 50%; }
 
 .sidebar {
-  z-index: 1;
   position: absolute;
   top: calc(65px + 8.5vh);
   left: calc(65vw + 25px);
@@ -336,12 +335,12 @@ span.smallLetters { font-size: calc(8px + 0.15vh + 0.125vw); }
 
 .baritem {
   position: absolute;
-  font-size: calc(12px + 1.75vw);
+  font-size: calc(10px + 1.25vw);
   letter-spacing: 0.125vw;
 }
 
 .bigwork {
-  font-size: calc(14px + 3vw);
+  font-size: calc(12px + 2.25vw);
   letter-spacing: 0.15vw;
 }
 
