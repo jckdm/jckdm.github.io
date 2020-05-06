@@ -1,28 +1,42 @@
 input, input:before, input:after {
   -webkit-user-select: initial;
-  -khtml-user-select: initial;
   -moz-user-select: initial;
-  -ms-user-select: initial;
   user-select: initial;
 }
 
 body {
-  color: #FFFFFF;
-  background-color: #00008B;
+  color: #e6e6e6;
   font-family: Helvetica;
   -moz-user-select: none;
-  -khtml-user-select: none;
   -webkit-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   box-sizing: border-box;
   cursor: auto;
+  background-color: #00008B;
   padding-bottom: calc(10px + 5vh);
-  width: 120%;
   border: 1.5px solid #0000FF;
 }
 
-#body2 { background-color: #0d0d0d; }
+#body2 {
+  background-color: #0d0d0d;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  height: auto;
+  max-width: 40%;
+  max-height: 85%;
+  display: -webkit-flex;
+  display: flex;
+  margin: auto;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
 #html2 { background-color: #00008B; }
 
 a, a:visited { text-decoration: none; }
@@ -36,9 +50,10 @@ html { background-color: #0d0d0d; width: 67.5%; }
 .strike2 { color: #ADD8E6; }
 
 .wrapper {
-  width: calc(25px + 26vw);
-  padding-left: 1.5vw;
-  font-size: calc(5px + 2vw + 0.75vh);
+  width: calc(25px + 25vw);
+  padding-top: calc(0.75vh + 2px);
+  padding-left: calc(2vw + 5px);
+  font-size: calc(5px + 2.75vw);
   letter-spacing: 0.285vw;
   line-height: 120%;
 }
@@ -51,9 +66,10 @@ html { background-color: #0d0d0d; width: 67.5%; }
 }
 
 .left {
+  position: relative;
   display: none;
-  padding-top: calc(10px + 3vh);
-  width: 20%;
+  padding-top: calc(15px + 10vh);
+  padding-left: calc(2vw + 5px);
   margin: 0 auto;
 }
 
@@ -81,7 +97,7 @@ html { background-color: #0d0d0d; width: 67.5%; }
 }
 
 .back {
-  padding-top: calc(50px + 3vh);
+  padding-top: calc(20px + 8.5vh);
   padding-left: calc(10px + 0.5vw)
 }
 
@@ -96,7 +112,7 @@ html { background-color: #0d0d0d; width: 67.5%; }
 }
 
 .bha:hover {
-  color: #FFFFFF;
+  color: #e6e6e6;
   text-decoration: underline;
 }
 
@@ -131,41 +147,46 @@ html { background-color: #0d0d0d; width: 67.5%; }
 #playlist:hover { color: hotpink; text-decoration: underline; }
 .audio { width: calc(25px + 27.5vw); }
 
-.about {
-  font-size: calc(8px + 0.2vw + 0.2vh);
-  line-height: 120%;
-}
+.about { font-size: calc(10px + 0.125vw + 0.125vh); }
 
 #CV, #RESUME, #checked { display: none; }
 
 span.big { font-size: calc(8px + 0.25vh + 0.2vw); }
 span.smallLetters { font-size: calc(8px + 0.15vh + 0.125vw); }
 
+.websiteImages {
+  padding: calc(3.5px + 1vw);
+  max-width: 50%;
+  border: 1.5px solid #0000FF;
+  background-color: #0d0d0d;
+}
+
 .reg-images {
   display: block;
-  max-width: 50%;
-  min-width: 50%;
+  max-width: 100%;
+  min-width: 100%;
 }
 
 .images {
   position: absolute;
-  top: calc(75px + 7vh);
-  left: calc(25px + 12vw);
+  top: calc(65px + 8.5vh);
+  left: calc(15px + 10vw);
   padding-left: 7vw;
 }
 
 #frame { max-width: 100%; }
 #iframeContainer2 { max-width: 50%; }
 
-.absolute2 {
+.sidebar {
+  z-index: 1;
   position: absolute;
-  top: calc(75px + 7vh);
-  left: 66vw;
+  top: calc(65px + 8.5vh);
+  left: calc(65vw + 25px);
   width: calc(20px + 20vw);
-  padding: calc(1.5vh + 0.5vw) calc(1.25vw + 0.25vh) calc(1.5vh + 0.5vw) calc(1.25vw + 0.25vh);
+  padding: calc(3px + 1vw);
+  border: 1.5px solid #0000FF;
   background-color: #0d0d0d;
-  border: 1px solid #0000FF;
-  line-height: calc(75% + 0.75vh + 0.1vw);
+  line-height: calc(70% + 0.5vh + 0.3vw);
 }
 
 .container {
@@ -193,7 +214,6 @@ span.smallLetters { font-size: calc(8px + 0.15vh + 0.125vw); }
 .statement {
   text-decoration: none;
   font-size: calc(8px + 0.75vw + 0.4vh);
-  color: white;
 }
 
 /* text on images */
@@ -212,18 +232,24 @@ span.smallLetters { font-size: calc(8px + 0.15vh + 0.125vw); }
 .container:hover .overlay { opacity: 0.85; }
 
 /* fullscreen images */
-#overlay {
+#overlay, #body2 {
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
   bottom: 0;
   background: #0d0d0d;
-  width: 100%;
-  height: 100%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
 }
 
 #popimage {
-  display: block;
+  width: auto;
+  height: auto;
   max-width: 100%;
   max-height: 100%;
   margin: auto;
@@ -269,18 +295,18 @@ span.smallLetters { font-size: calc(8px + 0.15vh + 0.125vw); }
 .modal, .abt-modal {
   display: none;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   padding-top: calc(52.5px + 4vh);
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: #0d0d0d;
+  background-color: #00008B;
 }
 
 .modal-content, .abt-modal-content {
-  background-color: #00008B;
+  background-color: #0d0d0d;
   margin: auto;
   padding: calc(12px + 0.35vw + 0.35vh);
   width: 70%;
@@ -304,37 +330,35 @@ span.smallLetters { font-size: calc(8px + 0.15vh + 0.125vw); }
 }
 
 .ph_close:hover, .arc_close:hover, .c_close:hover, .cv_close:hover, .a_close:hover, .w_close:hover, .p_close:hover, .sw_close:hover {
-  color: #FFFFFF;
+  color: #e6e6e6;
   text-decoration: none;
 }
 
 .baritem {
   position: absolute;
-  font-size: calc(16px + 1.25vw);
+  font-size: calc(12px + 1.75vw);
   letter-spacing: 0.125vw;
 }
 
 .bigwork {
-  font-size: calc(24px + 1.9vw);
+  font-size: calc(14px + 3vw);
   letter-spacing: 0.15vw;
 }
 
  .m_c {
-  color: white;
+  color: #e6e6e6;
   /* weirdly needed the above when put on github */
   position: absolute;
   text-decoration: none;
   font-size: calc(15px + 0.8vw + 0.5vh);
   padding-bottom: calc(1vh + 0.5vw);
   letter-spacing: 0.075vw;
-  border: none;
 }
 
 .m_cc {
   text-decoration: none;
   font-size: calc(8px + 0.5vw);
   letter-spacing: 0.075vw;
-  border: none;
 }
 
 .galleries {
@@ -345,7 +369,7 @@ span.smallLetters { font-size: calc(8px + 0.15vh + 0.125vw); }
 }
 
 .highlite {
-  color: #FFFFFF;
+  color: #E6E6E6; /* needed */
   padding-left: 4vw;
   position: absolute;
   font-size: calc(7px + 1vw + 1.2vh);
@@ -370,12 +394,21 @@ span.smallLetters { font-size: calc(8px + 0.15vh + 0.125vw); }
 
 @media only screen and (max-width: 415px) {
 
-  body { padding-bottom: calc(10px + 3vh); }
+  body {
+    padding-bottom: calc(10px + 3vh);
+    border: 1px solid #0000FF;
+  }
+
+  #body2 {
+    max-width: 65%;
+    max-height: 65%;
+  }
 
   .wrapper {
-    width: 50.5vw;
+    width: calc(25px + 47.5vw);
     font-size: calc(1.4vw + 20px);
-    padding: 0.75vh 0vw 0vw 4vw;
+    padding-top: calc(0.5vh + 2px);
+    padding-left: calc(3vw + 5px);
   }
 
   #header {
@@ -384,7 +417,10 @@ span.smallLetters { font-size: calc(8px + 0.15vh + 0.125vw); }
     line-height: calc(100% + 0.75vh);
   }
 
-  .about { line-height: 80%; }
+  .baritem { font-size: calc(10px + 4vw); }
+  .bigwork { font-size: calc(15px + 6vw); }
+
+  .about { line-height: 85%; }
 
   .column1 {
     padding-right: calc(1.25vw + 10px);
@@ -396,8 +432,8 @@ span.smallLetters { font-size: calc(8px + 0.15vh + 0.125vw); }
   }
 
   .left {
-    margin-left: 15px;
     padding-top: calc(10px + 7.5vh);
+    padding-left: calc(3vw + 5px);
   }
 
   .back {
@@ -416,17 +452,20 @@ span.smallLetters { font-size: calc(8px + 0.15vh + 0.125vw); }
   span.big { font-size: calc(8px + 0.2vh + 0.1vw); }
   span.smallLetters { font-size: calc(8px + 0.1vh + 0.1vw); }
 
+  .websiteImages { border: 1px solid #0000FF; }
+
   .images {
-    top: calc(42.5px + 7vh);
+    top: calc(40px + 7vh);
     left: calc(9vw + 12.5px);
   }
 
-  .absolute2 {
-    top: calc(42.5px + 7vh);
-    left: 63.5vw;
+  .sidebar {
+    top: calc(40px + 7vh);
+    left: calc(63vw + 15px);
     width: calc(28px + 20vw);
     padding: calc(1vh + 0.75vw) calc(1vw + 0.5vh) calc(1vh + 0.75vw) calc(1vw + 0.5vh);
     line-height: 80%;
+    border: 1px solid #0000FF;
   }
 
   .soundscape {
@@ -443,21 +482,21 @@ span.smallLetters { font-size: calc(8px + 0.15vh + 0.125vw); }
     padding-top: calc(10px + 5vh);
   }
 
+  .m_c { font-size: calc(13px + 0.8vw + 0.5vh); }
+  .m_cc { font-size: calc(9px + 0.5vw); }
+
+  .modal { padding-top: calc(25px + 12.5vh); }
+  .abt-modal { padding-top: calc(25px + 4vh); }
+  .modal-content { width: 80%; }
+  .abt-modal-content { line-height: 90%; }
+
+  .galleries { font-size: calc(12px + 0.8vw + 1vh); }
+  .highlite { padding: 0 0 5vw 6vw; }
+  .slash, .highlite { font-size: calc(6px + 0.9vw + 0.9vh); }
+
   .gap { padding-bottom: calc(4.5vh + 2vw); }
   .homespace { padding-bottom: calc(2.5vh + 1.5vw); }
   .inbspace { padding-bottom: calc(8vh - (6vh - 1vw)); }
   .space { padding-bottom: calc(2vh + 1vw); }
   .medspace { padding-bottom: calc(3.25vh + 1vw); }
-
-  .m_c { font-size: calc(13px + 0.8vw + 0.5vh); }
-  .m_cc { font-size: calc(9px + 0.5vw); }
-
-  .modal { padding-top: calc(25px + 10vh); }
-  .abt-modal { padding-top: calc(25px + 4vh); }
-  .modal-content { width: 80%; }
-  .abt-modal-content { line-height: 80%; }
-
-  .galleries { font-size: calc(12px + 0.8vw + 1vh); }
-  .highlite { padding: 0 0 5vw 6vw; }
-  .slash, .highlite { font-size: calc(6px + 0.9vw + 0.9vh); }
 }
