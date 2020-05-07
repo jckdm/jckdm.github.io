@@ -56,8 +56,6 @@ $(function() {
     if (name == "digital" && i == l) {
       $('.websiteImages').append('<iframe width="100%" frameborder="0" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/303889451&color=%23000000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe> <div class="iSpace"></div> <iframe width="100%" frameborder="0" src="https://player.vimeo.com/video/198531171?color=ffffff&byline=0&portrait=0" allowfullscreen></iframe>');
     }
-    else {
-      $('.websiteImages').append('<img class="reg-images" src="' + path + i + '.jpg"></img> <div class="iSpace"></div>');
-    }
+    else { $('.websiteImages').append('<img class="reg-images" src="' + path + i + '.jpg"></img> <div class="iSpace"></div>'); }
   }
 })
