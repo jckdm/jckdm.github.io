@@ -27,8 +27,6 @@ $(function() {
   var filename = (window.location.pathname).split('/').pop();
 
   var name = (filename.slice(0, -5)).replace(/-/g, '');
-  if (name == "120_h") { name = '120'; }
-  if (name == "eshetewoldeyilma_h") { name = 'eshetewoldeyilma'; }
   var path = 'img/' + name + '/';
   if (name == "120") { name = '_' + name; }
   var l = s(name);
