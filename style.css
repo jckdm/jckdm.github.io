@@ -260,7 +260,7 @@ span.smallLetters { font-size: calc(8px + 0.15vh + 0.125vw); }
 /* between images */
 .iSpace { padding-bottom: calc(2.5vh + 2.5vw); }
 /* btw home links */
-.homespace { padding-bottom: calc(0.5vh + 2.5vw); }
+.homespace { padding-bottom: calc(0.5vh + 2.25vw); }
 /* used in nav */
 .medspace { padding-bottom: calc(2vh + 1vw); }
 /* used in nav */
@@ -269,7 +269,6 @@ span.smallLetters { font-size: calc(8px + 0.15vh + 0.125vw); }
 .highgap { padding-bottom: calc(7.5px + 6vh + 2vw); }
 .endspace { padding-bottom: 7.5vh; }
 .hugespace { padding-bottom: 15vh; }
-.rSpace { padding-bottom: calc(1.5vh + 1.5vw); }
 
 .in { padding-left: 2%; }
 .indent { padding-right: 5%; }
@@ -500,5 +499,4 @@ span.smallLetters { font-size: calc(8px + 0.15vh + 0.125vw); }
   .space { padding-bottom: calc(2vh + 1vw); }
   .medspace { padding-bottom: calc(3.25vh + 1vw); }
   .endspace { padding-bottom: 5vh; }
-  .rSpace { padding-bottom: calc(2.5vh + 1vw); }
 }
