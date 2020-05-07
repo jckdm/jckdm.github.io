@@ -32,5 +32,6 @@ function Click() {
   if ((x + y) == answer) {
     $('#CV, #RESUME, #checked').css('display', 'block');
     $('#checker, #checking').css('display', 'none');
+    $('#switch').toggleClass('rSpace');
   }
 }

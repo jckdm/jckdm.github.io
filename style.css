@@ -269,6 +269,7 @@ span.smallLetters { font-size: calc(8px + 0.15vh + 0.125vw); }
 .highgap { padding-bottom: calc(7.5px + 6vh + 2vw); }
 .endspace { padding-bottom: 7.5vh; }
 .hugespace { padding-bottom: 15vh; }
+.rSpace { padding-bottom: calc(1.5vh + 1.5vw); }
 
 .in { padding-left: 2%; }
 .indent { padding-right: 5%; }
