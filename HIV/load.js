@@ -1,10 +1,5 @@
-// https://www.w3schools.com/howto/howto_css_modals.asp
-var modal = document.getElementById("myModal");
-var btn = document.getElementById("myBtn");
-var span = document.getElementsByClassName("close")[0];
-
-btn.onclick = function() { modal.style.display = "block"; }
-span.onclick = function() { modal.style.display = "none"; }
+$('#myBtn').on('click', function() { $('#myModal').css('display', 'block'); });
+$('.close').first().on('click', function() { $('#myModal').css('display', 'none'); });
 
 var c = 0;
 

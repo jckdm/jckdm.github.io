@@ -1,0 +1,155 @@
+#body2 {
+  background-color: #0d0d0d;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  height: auto;
+  max-width: 40%;
+  max-height: 85%;
+  display: -webkit-flex;
+  display: flex;
+  margin: auto;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+#html2 { background-color: #00008B; }
+.invisible { color: transparent; }
+.strike, .strike2 { text-decoration: line-through; }
+.strike { color: #FFC0CB; }
+.strike2 { color: #ADD8E6; }
+.about { font-size: calc(10px + 0.125vw + 0.125vh); }
+#CV, #RESUME, #checked { display: none; }
+
+.abt-modal-content {
+  line-height: 120%;
+  max-height: calc(100vh - 210px);
+}
+
+.wrapper {
+  width: calc(25px + 25vw);
+  padding-top: calc(0.75vh + 2px);
+  padding-left: calc(2vw + 5px);
+  font-size: calc(5px + 2.75vw);
+  letter-spacing: 0.285vw;
+  line-height: 120%;
+}
+
+.left {
+  position: relative;
+  display: none;
+  padding-top: calc(15px + 10vh);
+  padding-left: calc(2vw + 5px);
+  margin: 0 auto;
+}
+
+#check1 {
+  width: calc(1.5vw + 15px);
+  text-align: center;
+  font-size: 13px;
+  margin-right: 0.5vw;
+}
+
+#check2 {
+  width: calc(1.5vw + 15px);
+  text-align: center;
+  font-size: 13px;
+  margin-right: 0.5vw;
+  margin-left: 0.5vw;
+}
+
+#answer {
+  width: calc(1.5vw + 20px);
+  text-align: center;
+  font-size: 13px;
+  margin-left: 0.5vw;
+  margin-right: 0.5vw;
+}
+
+.in { padding-left: 2%; }
+
+/* Create two equal columns that floats next to each other */
+.column1, .column2 {
+  float: left;
+  width: 40%;
+  padding-top: 15px;
+  padding-left: calc(10px + 0.5vw);
+  padding-right: calc(10px + 1.5vw);
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.baritem {
+  position: absolute;
+  font-size: calc(12px + 1.75vw);
+  letter-spacing: 0.125vw;
+}
+
+.bigwork {
+  font-size: calc(14px + 3vw);
+  letter-spacing: 0.15vw;
+}
+
+.m_c {
+  color: #e6e6e6;
+  /* weirdly needed the above when put on github */
+  position: absolute;
+  text-decoration: none;
+  font-size: calc(15px + 0.8vw + 0.5vh);
+  padding-bottom: calc(1vh + 0.5vw);
+  letter-spacing: 0.075vw;
+}
+
+.m_cc {
+  text-decoration: none;
+  font-size: calc(8px + 0.5vw);
+  letter-spacing: 0.075vw;
+}
+
+@media only screen and (max-width: 415px) {
+
+  #body2 {
+    max-width: 65%;
+    max-height: 65%;
+  }
+
+  .wrapper {
+    width: calc(25px + 47.5vw);
+    font-size: calc(1.4vw + 20px);
+    padding-top: calc(0.5vh + 2px);
+    padding-left: calc(3vw + 5px);
+  }
+
+  .baritem { font-size: calc(7px + 4vw); }
+  .bigwork { font-size: calc(13px + 5vw); }
+
+  .about { line-height: 85%; }
+
+  .column1 {
+    padding-right: calc(1.25vw + 10px);
+    padding-left: calc(0.5vw + 3px);
+  }
+  .column2 {
+    padding-top: 5px;
+    padding-right: calc(1vw + 8px);
+  }
+
+  .left {
+    padding-top: calc(10px + 7.5vh);
+    padding-left: calc(3vw + 5px);
+  }
+
+  .m_c { font-size: calc(13px + 0.8vw + 0.5vh); }
+  .m_cc { font-size: calc(9px + 0.5vw); }
+  .abt-modal { padding-top: calc(25px + 4vh); }
+  .abt-modal-content { line-height: 90%; }
+}

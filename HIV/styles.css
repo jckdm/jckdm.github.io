@@ -54,7 +54,6 @@ body { background-color: black; }
   margin: auto;
   padding: calc(12px + 0.35vw + 0.35vh);
   width: 70%;
-  height: calc(15vw + 35vh);
   overflow: auto;
   overflow-y: auto;
   border: 1.5px solid #0000FF;
@@ -219,5 +218,6 @@ a, a:visited .close:hover, .ph_close:hover, .arc_close:hover, .c_close:hover, .c
 .highgap { padding-bottom: calc(7.5px + 6vh + 2vw); }
 .hugespace { padding-bottom: 15vh; }
 #arrSpace { padding-bottom: 5vh; }
+.iSpace { padding-bottom: calc(2.5vh + 2.5vw); }
 
 a:hover, .galleries:hover, .highlite:hover { text-decoration: underline; cursor: auto; }
