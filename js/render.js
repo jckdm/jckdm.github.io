@@ -1,35 +1,16 @@
-function s(page) {
-  var portraits = 9;
-  var selfportraits = 8;
-  var fashion = 6;
-  var stilllife = 15;
-  var street = 10;
-
-  var dollhouse = 20;
-  var dreaming = 12;
-  var eshetewoldeyilma = 13;
-  var soyboricua = 11;
-  var _120 = 9;
-  var tocomeofage = 3;
-
-  var painting = 9;
-  var drawing = 8;
-  var sculpture = 4;
-  var digital = 6;
-  var streetart = 8;
-
-  var chapbook = 6;
-
-  return (eval(page));
-}
-
 $(function() {
-  var filename = (window.location.pathname).split('/').pop();
+  var x = {
+    portraits: 9, selfportraits: 8, fashion: 6, stilllife: 15, street: 10,
+    dollhouse: 20, dreaming: 12, eshetewoldeyilma: 13, soyboricua: 11, _120: 9, tocomeofage: 3,
+    painting: 9, drawing: 8, sculpture: 4, digital: 6, streetart: 8,
+    chapbook: 6
+  };
 
+  var filename = (window.location.pathname).split('/').pop();
   var name = (filename.slice(0, -5)).replace(/-/g, '');
   var path = 'img/' + name + '/';
   if (name == "120") { name = '_' + name; }
-  var l = s(name);
+  var l = x[name];
 
   var sculpture1 = '<i>Fixing a Hole</i> <br> <br> 2019 <br> <br> 48 x 16 in. <br> <br> Candle wax on wood';
   var sculpture2 = '<i>Cerulean (Light)</i> <br> <br> 2019 <br> <br> 33 x 22 in. <br> <br> Acrylic, wall paint, spray paint, raw canvas, thread, nails, superglue on canvas';

@@ -5,9 +5,8 @@
 
 .bha {
   position: fixed;
-  font-size: calc(37.5px + 0.3vw + 0.6vh);
+  font-size: calc(35px + 0.3vw + 0.6vh);
   color: #808080;
-  letter-spacing: 0.125vw;
 }
 
 .bha:hover {
@@ -16,12 +15,12 @@
 }
 
 .bha:hover:after {
-  content: ' back';
+  content: 'back';
   font-size: 30%;
 }
 
 #backhome:hover:after {
-  content: ' home';
+  content: 'home';
   font-size: 30%;
 }
 
@@ -45,7 +44,7 @@ span.smallLetters { font-size: calc(8px + 0.15vh + 0.125vw); }
 .images {
   position: absolute;
   top: calc(65px + 8.5vh);
-  left: calc(15px + 10vw);
+  left: calc(20px + 10vw);
   padding-left: 7vw;
 }
 
