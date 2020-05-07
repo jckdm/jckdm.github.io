@@ -500,4 +500,5 @@ span.smallLetters { font-size: calc(8px + 0.15vh + 0.125vw); }
   .space { padding-bottom: calc(2vh + 1vw); }
   .medspace { padding-bottom: calc(3.25vh + 1vw); }
   .endspace { padding-bottom: 5vh; }
+  .rSpace { padding-bottom: calc(2.5vh + 1vw); }
 }
