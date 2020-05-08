@@ -6,6 +6,8 @@ $(function() {
     chapbook: 6
   };
 
+  $('head').append('<meta name="viewport" content="width=device-width, initial-scale=1.0"/> <link rel="apple-touch-icon" sizes="180x180" href="pics/apple-touch-icon.png"> <link rel="icon" type="image/png" sizes="16x16" href="pics/favicon-16x16.png"> <link rel="icon" type="image/png" sizes="32x32" href="pics/favicon-32x32.png"> <link rel="manifest" href="pics/site.webmanifest"> <link rel="mask-icon" href="pics/safari-pinned-tab.svg" color="#000000"> <meta name="msapplication-TileColor" content="#2b5797"> <meta name="theme-color" content="#ffffff">');
+
   var filename = (window.location.pathname).split('/').pop();
   var name = (filename.slice(0, -5)).replace(/-/g, '');
   var path = 'img/' + name + '/';
@@ -27,14 +29,25 @@ $(function() {
   var painting8 = '<i>Charlie-Gibbs Fracture Zone</i> <br> <br> 2018 <br> <br> 23 x 29 in. <br> <br> Wall paint, spray paint, acrylic paint on wood panel';
   var painting9 = '<i>El techo de tu cuarto</i> <br> <br> 2018 <br> <br> 18 x 48 in. <br> <br> Glass paint and block printing ink on paper';
 
+  var c = (name == "sculpture" || name == "painting") ? '<div class="paintsculpt"></div>' : '<div class="websiteImages"></div>';
+  $('body').append('<div class="images">' + c + '<div class="endspace"></div> </div>');
+
   for (var i = 1; i <= l; i++) {
     if (name == "sculpture" || name == "painting") {
-      $('.images').append('<div class="container"> <img class="hoverables" src="' + path + i + '.jpg"></img> <div class="overlay"> <div class="text">'
+      $('.paintsculpt').append('<div class="container"> <img class="hoverables" src="' + path + i + '.jpg"></img> <div class="overlay"> <div class="text">'
       + eval(name + i) + '</div> </div> </div> <div class="iSpace"></div>');
     }
-    if (name == "digital" && i == l) {
+    else if (name == "digital" && i == l) {
       $('.websiteImages').append('<iframe width="100%" frameborder="0" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/303889451&color=%23000000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe> <div class="iSpace"></div> <iframe width="100%" frameborder="0" src="https://player.vimeo.com/video/198531171?color=ffffff&byline=0&portrait=0" allowfullscreen></iframe>');
     }
     else { $('.websiteImages').append('<img class="reg-images" src="' + path + i + '.jpg"></img> <div class="iSpace"></div>'); }
   }
+
+	$('.websiteImages').click(function(e) {
+		if (e.target.tagName === 'IMG') {
+			$('body').append('<div id="overlay"></div>');
+			$('#overlay').append('<img id="popimage" src="' + e.target.src + '"></div>');
+			$('#overlay').click(function() { document.body.removeChild(overlay); })
+		}
+	});
 })

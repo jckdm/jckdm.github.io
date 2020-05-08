@@ -28,7 +28,7 @@
 span.big { font-size: calc(8px + 0.25vh + 0.2vw); }
 span.smallLetters { font-size: calc(8px + 0.15vh + 0.125vw); }
 
-.websiteImages {
+.websiteImages, .paintsculpt {
   padding: calc(3.5px + 1vw);
   max-width: 50%;
   border: 1.5px solid #0000FF;
@@ -59,17 +59,13 @@ span.smallLetters { font-size: calc(8px + 0.15vh + 0.125vw); }
   line-height: calc(70% + 0.5vh + 0.3vw);
 }
 
-.container {
+.container, .hoverables {
   position: relative;
-  max-width: 50%;
-  min-width: 50%;
-}
-
-.hoverables {
-  display: block;
   max-width: 100%;
   min-width: 100%;
 }
+
+.hoverables { display: block; }
 
 .text {
   font-size: calc(7px + 0.65vw);
@@ -101,7 +97,8 @@ span.smallLetters { font-size: calc(8px + 0.15vh + 0.125vw); }
   background-color: #808080;
 }
 
-.container:hover, .overlay { opacity: 0.85; }
+/* no comma needed. made that mistake. */
+.container:hover .overlay { opacity: 0.85; }
 
 /* fullscreen images */
 #overlay {
@@ -141,7 +138,7 @@ span.smallLetters { font-size: calc(8px + 0.15vh + 0.125vw); }
 
   .bha:hover, #backhome:hover { text-decoration: none; }
   #arrSpace { padding-bottom: 2vh; }
-  .websiteImages { border: 1px solid #0000FF; }
+  .websiteImages, .paintsculpt { border: 1px solid #0000FF; }
 
   span.big { font-size: calc(8px + 0.2vh + 0.1vw); }
   span.smallLetters { font-size: calc(8px + 0.1vh + 0.1vw); }
