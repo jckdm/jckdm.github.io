@@ -45,6 +45,7 @@ a:hover { color: hotpink; }
   .stranger { width: 85%; }
   .column2 { padding-top: 12.5px; }
   .close-strange {
+    line-height: 80%;
     top: 87.5vh;
     float: bottom;
     left: calc(5px + 1vw);
