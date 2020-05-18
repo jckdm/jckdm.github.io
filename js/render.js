@@ -10,7 +10,6 @@ $(function() {
 
   var filename = (window.location.pathname).split('/').pop();
   var name = filename.replace(/-/g, '');
-  console.log(name);
   var path = 'img/' + name + '/';
   if (name == "120") { name = '_' + name; }
   var l = x[name];
