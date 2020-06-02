@@ -72,7 +72,7 @@ html { background-color: #0d0d0d; width: 67.5%; }
   border: 1.5px solid #0000FF;
 }
 
-.ph_close, .arc_close, .c_close, .cv_close, .a_close, .w_close, .p_close, .sw_close {
+#Phclose, #Arcclose, #Contactclose, #CVclose, #Aboutclose, #Wclose, #Pclose, #SWclose {
   color: #808080;
   float: right;
   font-size: calc(37.5px + 0.75vw + 0.75vh);
@@ -80,7 +80,7 @@ html { background-color: #0d0d0d; width: 67.5%; }
   line-height: 100%;
 }
 
-.ph_close:hover, .arc_close:hover, .c_close:hover, .cv_close:hover, .a_close:hover, .w_close:hover, .p_close:hover, .sw_close:hover {
+#PHclose:hover, #Arcclose:hover, #Contactclose:hover, #CVclose:hover, #Aboutclose:hover, #Wclose:hover, #Pclose:hover, #SWclose:hover {
   color: #e6e6e6;
   text-decoration: none;
 }

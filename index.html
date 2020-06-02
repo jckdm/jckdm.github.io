@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="description" content="Jack Adam is a multimedia artist and computer scientist." />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/intro.js"></script>
     <link rel="stylesheet" type="text/css" href=css/style.css>
     <link rel="stylesheet" type="text/css" href=css/index.css>
@@ -27,11 +27,11 @@
         <span class='strike2'></span>
     </div>
     <div class="left">
-        <a id="myAboutBtn" class="baritem">ABOUT</a>
+        <a id="AboutBtn" onclick="show($(this).attr('id'))" class="baritem">ABOUT</a>
         <div class="homespace"> </div>
-        <div id="myAboutModal" class="abt-modal">
+        <div id="AboutModal" class="abt-modal">
             <div class="abt-modal-content">
-                <span class="a_close">&#8617;&#xFE0E;</span>
+                <span onclick="hide($(this).attr('id'))" id="Aboutclose">&#8617;&#xFE0E;</span>
                 <div class="row">
                     <div class="in">
                         <text class="about">October, 2019</text>
@@ -63,11 +63,11 @@
             </div>
         </div>
         <div class="medspace"></div>
-        <a id="myCVBtn" class="baritem">CV</a>
+        <a id="CVBtn" onclick="show($(this).attr('id'))" class="baritem">CV</a>
         <div class="homespace"> </div>
-        <div id="myCVModal" class="modal">
+        <div id="CVModal" class="modal">
             <div class="modal-content">
-                <span class="cv_close">&#8617;&#xFE0E;</span>
+                <span onclick="hide($(this).attr('id'))" id="CVclose">&#8617;&#xFE0E;</span>
                 <a href="pics/CV.pdf" target="_blank" id="CV" class="m_c">CV</a>
                 <div id="checked" class="gap"> </div>
                 <a href="pics/Resume.pdf" target="_blank" id="RESUME" class="m_c">Résumé</a>
@@ -81,10 +81,10 @@
             </div>
         </div>
         <div class="medspace"></div>
-        <a id="myContactBtn" class="baritem">CONTACT</a>
-        <div id="myContactModal" class="modal">
+        <a id="ContactBtn" onclick="show($(this).attr('id'))" class="baritem">CONTACT</a>
+        <div id="ContactModal" class="modal">
             <div class="modal-content">
-                <span class="c_close">&#8617;&#xFE0E;</span>
+                <span onclick="hide($(this).attr('id'))" id="Contactclose">&#8617;&#xFE0E;</span>
                 <span class="m_c">(347) 834 4704</span>
                 <div class="gap"> </div>
                 <span class="m_c">jack.adam@yale.edu</span>
@@ -95,26 +95,26 @@
             </div>
         </div>
         <div class="endspace"></div>
-        <h2 id="myWBtn" class="bigwork">WORK</h2>
+        <h2 id="WBtn" onclick="show($(this).attr('id'))" class="bigwork">WORK</h2>
         <div class="space"> </div>
-        <div id="myWModal" class="modal">
+        <div id="WModal" class="modal">
             <div class="modal-content">
-                <span class="w_close">&#8617;&#xFE0E;</span>
-                <a id="myArcBtn" class="archive">View Full Archive</a>
+                <span onclick="hide($(this).attr('id'))" id="Wclose">&#8617;&#xFE0E;</span>
+                <a id="ArcBtn" onclick="show($(this).attr('id'))" class="archive">View Full Archive</a>
                 <div class="gap"> </div>
-                <div id="myArcModal" class="modal">
+                <div id="ArcModal" class="modal">
                     <div class="modal-content">
-                        <span class="arc_close">&#8617;&#xFE0E;</span>
-                        <a id="myPhBtn" class="galleries">Photography</a>
+                        <span onclick="hide($(this).attr('id'))" id="Arcclose">&#8617;&#xFE0E;</span>
+                        <a id="PhBtn" onclick="show($(this).attr('id'))" class="galleries">Photography</a>
                         <div class="gap"></div>
-                        <div id="myPhModal" class="modal">
+                        <div id="PhModal" class="modal">
                             <div class="modal-content">
-                                <span class="ph_close">&#8617;&#xFE0E;</span>
-                                <a id="myPBtn" class="galleries">Projects</a>
+                                <span onclick="hide($(this).attr('id'))" id="Phclose">&#8617;&#xFE0E;</span>
+                                <a id="PBtn" onclick="show($(this).attr('id'))" class="galleries">Projects</a>
                                 <div class="gap"> </div>
-                                <div id="myPModal" class="modal">
+                                <div id="PModal" class="modal">
                                     <div class="modal-content">
-                                        <span class="p_close">&#8617;&#xFE0E;</span>
+                                        <span onclick="hide($(this).attr('id'))" id="Pclose">&#8617;&#xFE0E;</span>
                                         <span data-href="doll-house" class="galleries">Doll House</span>
                                         <div class="gap"> </div>
                                         <span data-href="dreaming" class="galleries">Dreaming</span>
@@ -129,10 +129,10 @@
                                         <div class="medspace"> </div>
                                     </div>
                                 </div>
-                                <a id="mySWBtn" class="galleries">Selected Works</a>
-                                <div id="mySWModal" class="modal">
+                                <a id="SWBtn" onclick="show($(this).attr('id'))" class="galleries">Selected Works</a>
+                                <div id="SWModal" class="modal">
                                     <div class="modal-content">
-                                        <span class="sw_close">&#8617;&#xFE0E;</span>
+                                        <span onclick="hide($(this).attr('id'))" id="SWclose">&#8617;&#xFE0E;</span>
                                         <span data-href="portraits" class="galleries">Portraits</span>
                                         <div class="gap"> </div>
                                         <span data-href="self-portraits" class="galleries">Self-portraits</span>
