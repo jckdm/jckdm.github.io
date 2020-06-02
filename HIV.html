@@ -24,25 +24,25 @@
   </div>
 
   <div class="back">
-    <a id="myWBtn" class="bha">&#8617;&#xFE0E;</a>
-    <div id="myWModal" class="modal">
+    <a id="WBtn" onclick="show($(this).attr('id'))" class="bha">&#8617;&#xFE0E;</a>
+    <div id="WModal" class="modal">
         <div class="modal-content">
-          <span class="w_close">&#8617;&#xFE0E;</span>
-          <a id="myArcBtn" class="archive">View Full Archive</a>
+          <span onclick="hide($(this).attr('id'))" id="Wclose">&#8617;&#xFE0E;</span>
+          <a id="ArcBtn" onclick="show($(this).attr('id'))" class="archive">View Full Archive</a>
           <div class="gap"> </div>
-          <div id="myArcModal" class="modal">
+          <div id="ArcModal" class="modal">
               <div class="modal-content">
-                  <span class="arc_close">&#8617;&#xFE0E;</span>
-                  <a id="myPhBtn" class="galleries">Photography</a>
+                  <span onclick="hide($(this).attr('id'))" id="Arcclose">&#8617;&#xFE0E;</span>
+                  <a id="PhBtn" onclick="show($(this).attr('id'))" class="galleries">Photography</a>
                   <div class="gap"></div>
-                  <div id="myPhModal" class="modal">
+                  <div id="PhModal" class="modal">
                       <div class="modal-content">
-                          <span class="ph_close">&#8617;&#xFE0E;</span>
-                          <a id="myPBtn" class="galleries">Projects</a>
+                          <span onclick="hide($(this).attr('id'))" id="Phclose">&#8617;&#xFE0E;</span>
+                          <a id="PBtn" onclick="show($(this).attr('id'))" class="galleries">Projects</a>
                           <div class="gap"> </div>
-                          <div id="myPModal" class="modal">
+                          <div id="PModal" class="modal">
                               <div class="modal-content">
-                                  <span class="p_close">&#8617;&#xFE0E;</span>
+                                  <span onclick="hide($(this).attr('id'))" id="Pclose">&#8617;&#xFE0E;</span>
                                   <span data-href="doll-house" class="galleries">Doll House</span>
                                   <div class="gap"> </div>
                                   <span data-href="dreaming" class="galleries">Dreaming</span>
@@ -57,10 +57,10 @@
                                   <div class="medspace"> </div>
                               </div>
                           </div>
-                          <a id="mySWBtn" class="galleries">Selected Works</a>
-                          <div id="mySWModal" class="modal">
+                          <a id="SWBtn" onclick="show($(this).attr('id'))" class="galleries">Selected Works</a>
+                          <div id="SWModal" class="modal">
                               <div class="modal-content">
-                                  <span class="sw_close">&#8617;&#xFE0E;</span>
+                                  <span onclick="hide($(this).attr('id'))" id="SWclose">&#8617;&#xFE0E;</span>
                                   <span data-href="portraits" class="galleries">Portraits</span>
                                   <div class="gap"> </div>
                                   <span data-href="self-portraits" class="galleries">Self-portraits</span>
@@ -141,10 +141,10 @@
         </p>
       </div>
 
-      <button id="myBtn">?</button>
-      <div id="myModal" class="modal">
+      <button id="QBtn" onclick="show($(this).attr('id'))">?</button>
+      <div id="QModal" class="modal">
         <div class="modal-content">
-          <span class="close">&times;</span>
+          <span onclick="hide($(this).attr('id'))" id="Qclose">&times;</span>
           <p id="attr">All data courtesy of U.S. Department of Health & Human Services</p>
           <p id="attr">Source: <a id="attr" href="https://healthdata.gov" target="_blank">HealthData.gov</a></p>
           <br>
@@ -154,7 +154,6 @@
       </div>
     </div>
     <script type="text/javascript" src="HIV/load.js"></script>
-    <script type="text/javascript" src="js/HIV-script.js"></script>
     <script src="js/link.js"></script>
 </body>
 </html>

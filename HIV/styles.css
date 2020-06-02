@@ -59,7 +59,7 @@ body { background-color: black; }
   border: 1.5px solid #0000FF;
 }
 
-#myBtn {
+#QBtn {
   position: absolute;
   left: 900px;
   top: 500px;
@@ -72,7 +72,7 @@ body { background-color: black; }
   border-radius: 20px;
 }
 
-#myBtn:hover { background-color: #ffa500; }
+#QBtn:hover { background-color: #ffa500; }
 
 /* https://www.cssscript.com/create-a-multi-level-drop-down-menu-with-pure-css/ */
 ul { list-style: none; padding: 0; margin: 0; }
@@ -167,8 +167,7 @@ ul:after { clear: both; }
   font-size: 30%;
 }
 
-/* abt unused, leaving for test */
-.close, .ph_close, .arc_close, .abt_close, .c_close, .cv_close, .a_close, .w_close, .p_close, .sw_close {
+#Qclose, #Phclose, #Arcclose, #Wclose, #Pclose, #SWclose {
   color: #808080;
   float: right;
   font-size: calc(37.5px + 0.75vw + 0.75vh);
@@ -176,7 +175,7 @@ ul:after { clear: both; }
   line-height: 100%;
 }
 
-a, a:visited .close:hover, .ph_close:hover, .arc_close:hover, .c_close:hover, .cv_close:hover, .a_close:hover, .w_close:hover, .p_close:hover, .sw_close:hover {
+a, a:visited, #Qclose:hover, #Phclose:hover, #Arcclose:hover, #Wclose:hover, #Pclose:hover, #SWclose:hover {
   color: #FFFFFF;
   text-decoration: none;
 }

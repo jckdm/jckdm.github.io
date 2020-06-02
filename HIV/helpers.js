@@ -1,5 +1,3 @@
-window.onclick = function(event) { if (event.target == modal) { modal.style.display = "none"; }}
-
 function sliderChange(val) { document.getElementById('output').innerHTML = val; }
 
 // https://www.sitepoint.com/delay-sleep-pause-wait/
