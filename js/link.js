@@ -1,3 +1,6 @@
+function show(id) { $('#' + id.substr(0, id.length - 3) + 'Modal').css('display', 'block'); }
+function hide(id) { $('#' + id.substr(0, id.length - 5) + 'Modal').css('display', 'none'); }
+
 $(function() {
   // disable white link popup in bottom left corner
   var aTags = document.querySelectorAll('span[data-href]');
@@ -11,6 +14,3 @@ $(function() {
     });
   }
 })
-
-function show(id) { $('#' + id.substr(0, id.length - 3) + 'Modal').css('display', 'block'); }
-function hide(id) { $('#' + id.substr(0, id.length - 5) + 'Modal').css('display', 'none'); }
