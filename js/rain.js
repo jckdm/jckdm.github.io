@@ -2,11 +2,17 @@ $(window).resize(function() {
   setTimeout(function() { location.reload(true); }, 2000);
 });
 
-var w = $(window).width() - 20;
-var h = $(window).height() - 20;
+var w = $(window).width() - 25;
+var h = $(window).height() - 25;
 
 var ww = w / 50;
 var arr, y;
+var flag = true;
+
+var ascii_arr = [];
+for (var i = 32; i < 127; i++) {
+  ascii_arr.push(String.fromCharCode(i));
+}
 
 function setup() {
   createCanvas(w, h);
@@ -21,11 +27,11 @@ function setup() {
   if (hr < 6) { hrs = 5 - hr; }
   var m = ((hrs * 60) + (59 - d.getMinutes()) + d.getSeconds() / 3600) / 1440;
 
-  fill((20 * m) + 5, (36 * m) + 9, (82 * m) + 20.5);
-  stroke(0, 0, 0, 50);
-  for (var i = 0; i < w / 10; i++) {
-    for (var j = 0; j < h / 10; j++) {
-      rect(i*10, j*10, ww, ww);
+  textSize(8);
+  fill((20 * m) + 2.5, (36 * m) + 4.5, (82 * m) + 10.25);
+  for (var i = 0; i < w; i += 8) {
+    for (var j = 0; j < h; j += 8) {
+      text(ascii_arr[Math.floor(Math.random() * 95) % 95], i, j);
     }
   }
   arr = ws();
@@ -40,8 +46,6 @@ function ws() {
   return arr;
 }
 
-var y = 0;
-
 function draw() {
 
   var j0 = Math.random() * (w / 75);
@@ -49,7 +53,7 @@ function draw() {
 
   if (y < h) {
     noStroke();
-    fill(70, 100, 140, 80);
+    fill(70, 100, 140, 100);
 
     for (var i = 0; i < 10; i++) {
       var j = i % 2 == 0 ? j0 : j1;
