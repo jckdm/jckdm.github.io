@@ -8,7 +8,10 @@ $(function() {
 
   $('head').append('<meta name="viewport" content="width=device-width, initial-scale=1.0"/> <link rel="apple-touch-icon" sizes="180x180" href="pics/apple-touch-icon.png"> <link rel="icon" type="image/png" sizes="16x16" href="pics/favicon-16x16.png"> <link rel="icon" type="image/png" sizes="32x32" href="pics/favicon-32x32.png"> <link rel="manifest" href="pics/site.webmanifest"> <link rel="mask-icon" href="pics/safari-pinned-tab.svg" color="#000000"> <meta name="msapplication-TileColor" content="#2b5797"> <meta name="theme-color" content="#ffffff">');
 
-  var filename = (window.location.pathname).split('/').pop();
+  var path = window.location.pathname;
+  var filename = path.split('/').pop();
+  if (filename.slice(-5) == '.html') { window.location.replace(path.slice(0, -5)); }
+
   var name = filename.replace(/-/g, '');
   var path = 'img/' + name + '/';
   if (name == "120") { name = '_' + name; }
