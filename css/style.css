@@ -116,6 +116,8 @@ html { background-color: #0d0d0d; width: 67.5%; }
 
 @media only screen and (max-width: 415px) {
 
+  html { width: 80%; }
+
   body {
     padding-bottom: calc(10px + 3vh);
     border: 1px solid #0000FF;
