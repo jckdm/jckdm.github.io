@@ -59,6 +59,8 @@ span.smallLetters { font-size: calc(8px + 0.15vh + 0.125vw); }
   line-height: calc(70% + 0.5vh + 0.3vw);
 }
 
+.sidebar a { color: hotpink; }
+
 .container, .hoverables {
   position: relative;
   max-width: 100%;

@@ -1,19 +1,19 @@
-window.onload = setTimeout(function() {
-  var text = "jack adam is ... an artist",
-      soFar = "";
+$(document).ready(setTimeout(() => {
+  const text = 'jack adam is ... an artist';
+  let soFar = '';
 
-  var visible = document.querySelector(".visible"),
-      invisible = document.querySelector(".invisible");
-      box = document.getElementsByTagName("BODY")[0];
+  const visible = document.querySelector('.visible'),
+      invisible = document.querySelector('.invisible');
+      box = document.getElementsByTagName('BODY')[0];
 
   a(text, soFar, visible, invisible);
-  box.style.display = "block";
-}, 350);
+  box.style.display = 'block';
+}, 350));
 
-function a(text, soFar, vis, invis) {
+a = (text, soFar, vis, invis) => {
 
   invis.innerHTML = text;
-  var t = setInterval(function() {
+  const t = setInterval(() => {
       soFar += text.substr(0, 1),
       text = text.substr(1);
 
@@ -25,12 +25,12 @@ function a(text, soFar, vis, invis) {
   }, 110)
 }
 
-function b(text, soFar, vis, invis) {
+b = (text, soFar, vis, invis) => {
 
-    var i = 26;
-    var s = document.querySelector(".strike");
+    let i = 26;
+    const s = document.querySelector('.strike');
 
-    var x = setInterval(function() {
+    const x = setInterval(() => {
       if (i > 17) {
         text = soFar.substr(0, i - 1);
         vis.innerHTML = text;
@@ -41,13 +41,13 @@ function b(text, soFar, vis, invis) {
     c(text, soFar, vis);
 }
 
-function c(text, soFar, vis) {
+c = (text, soFar, vis) => {
 
-    var next = document.querySelector(".next");
-    var so = ""
-    var te = " ... a technologist"
+    const next = document.querySelector('.next');
+    let so = ''
+    let te = ' ... a technologist'
 
-    var t = setInterval(function() {
+    const t = setInterval(() => {
         so += te.substr(0, 1);
         te = te.substr(1);
 
@@ -57,24 +57,24 @@ function c(text, soFar, vis) {
     d(text, soFar, vis);
 }
 
-function d(text, soFar, vis) {
+d = (text, soFar, vis) => {
 
-    var i = 16;
-    var s = document.querySelector(".strike2");
-    var next = document.querySelector(".next");
-    var q = document.querySelector(".q");
-    var that = " a technologist";
-    var j = that.length;
+    let i = 16;
+    const s = document.querySelector('.strike2');
+    const next = document.querySelector('.next');
+    const q = document.querySelector('.q');
+    const that = ' a technologist';
+    let j = that.length;
 
-    var x = setInterval(function() {
+    const x = setInterval(() => {
       if (i > 1) {
         next.innerHTML = (next.innerHTML).substr(0, i - 1);
         s.innerHTML = that[j-1] + s.innerHTML;
         i -= 1;
         j -= 1;
       }
-      next.innerHTML = " ... ";
+      next.innerHTML = ' ... ';
     }, 50)
 
-    setTimeout(function(){ document.querySelector('.left').style.display = "block"; }, 2000);
+    setTimeout(() => document.querySelector('.left').style.display = 'block', 2000);
 }

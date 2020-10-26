@@ -20,6 +20,8 @@ body {
 a, a:visited { text-decoration: none; }
 .statement:hover, .galleries:hover, .baritem:hover, .archive:hover, .bigwork:hover, .highlite:hover { text-decoration: underline; cursor: auto; }
 
+.galleries { color: #e6e6e6; }
+
 html { background-color: #0d0d0d; width: 67.5%; }
 
 #header {
