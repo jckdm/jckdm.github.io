@@ -10,11 +10,10 @@ body {
   -moz-user-select: none;
   -webkit-user-select: none;
   user-select: none;
-  box-sizing: border-box;
   cursor: auto;
-  background-color: #00008B;
-  padding-bottom: calc(10px + 5vh);
-  border: 1.5px solid #0000FF;
+  height: calc(125px + 6vw + 10vh);
+  border-top: 1.5px solid #0000FF;
+  border-left: 1.5px solid #0000FF;
 }
 
 a, a:visited { text-decoration: none; }
@@ -121,8 +120,9 @@ html { background-color: #0d0d0d; width: 67.5%; }
   html { width: 80%; }
 
   body {
-    padding-bottom: calc(10px + 3vh);
-    border: 1px solid #0000FF;
+    height: calc(100px + 6vw + 8.5vh);
+    border-top: 1.5px solid #0000FF;
+    border-left: 1.5px solid #0000FF;
   }
 
   #header {
