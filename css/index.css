@@ -24,7 +24,6 @@
 .strike { color: #FFC0CB; }
 .strike2 { color: #ADD8E6; }
 .about { font-size: calc(10px + 0.125vw + 0.125vh); }
-#CV, #RESUME, #checked { display: none; }
 
 .abt-modal-content {
   line-height: 120%;
