@@ -14,7 +14,7 @@ $(() => {
   // comment out this line
   if (filename.slice(-5) == '.html') { window.location.replace(path.slice(0, -5)); }
   // switch definitions of name
-  let name = filename.=.replace(/-/g, '');
+  let name = filename.replace(/-/g, '');
   // let name = filename.slice(0,-5).replace(/-/g, '');
 
   path = 'img/' + name + '/';
