@@ -1,7 +1,7 @@
 $(() => {
   const x = {
     portraits: 9, selfportraits: 8, fashion: 6, stilllife: 15, street: 10,
-    dollhouse: 20, dreaming: 12, eshetewoldeyilma: 13, soyboricua: 11, _120: 9, tocomeofage: 3,
+    dollhouse: 20, dreaming: 12, eshetewoldeyilma: 13, soyboricua: 11, _120: 9, comeofage: 3,
     painting: 9, drawing: 8, sculpture: 4, digital: 6, streetart: 8,
     chapbook: 6
   };
@@ -40,7 +40,7 @@ $(() => {
   const c = (name == "sculpture" || name == "painting") ? '<div class="paintsculpt"></div>' : '<div class="websiteImages"></div>';
   $('body').prepend('<div class="images">' + c + '<div class="endspace"></div> </div>');
 
-  if (['dollhouse', 'dreaming', 'eshetewoldeyilma', 'soyboricua', '_120', 'tocomeofage', 'streetart', 'chapbook'].includes(name)) {
+  if (['dollhouse', 'dreaming', 'eshetewoldeyilma', 'soyboricua', '_120', 'comeofage', 'streetart', 'chapbook'].includes(name)) {
     $('body').append('<div id="expand" onclick="describe()"> <span id="pull">show project description</span> </div>');
   }
 
