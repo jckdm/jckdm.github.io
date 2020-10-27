@@ -61,6 +61,8 @@ span.smallLetters { font-size: calc(8px + 0.15vh + 0.125vw); }
 
 .sidebar a { color: hotpink; }
 
+#expand { visibility: hidden; }
+
 .container, .hoverables {
   position: relative;
   max-width: 100%;
@@ -140,7 +142,10 @@ span.smallLetters { font-size: calc(8px + 0.15vh + 0.125vw); }
 
   .bha:hover, #backhome:hover { text-decoration: none; }
   #arrSpace { padding-bottom: 2vh; }
-  .websiteImages, .paintsculpt { border: 1px solid #0000FF; }
+  .websiteImages, .paintsculpt {
+    border: 1px solid #0000FF;
+    max-width: 90%;
+  }
 
   span.big { font-size: calc(8px + 0.2vh + 0.1vw); }
   span.smallLetters { font-size: calc(8px + 0.1vh + 0.1vw); }
@@ -150,7 +155,21 @@ span.smallLetters { font-size: calc(8px + 0.15vh + 0.125vw); }
     left: calc(9vw + 12.5px);
   }
 
+  #expand {
+    visibility: visible;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #1a1a1a;
+    padding: 15px 7.5px 7.5px 7.5px;
+    border-left: 1.5px solid #0000FF;
+    border-bottom: 1.5px solid #0000FF;
+  }
+
+  #pull { font-size: calc(10px + 0.15vh + 0.15vw); }
+
   .sidebar {
+    opacity: 0;
     top: calc(40px + 7vh);
     left: calc(63vw + 15px);
     width: calc(28px + 20vw);

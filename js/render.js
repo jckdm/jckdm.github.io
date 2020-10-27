@@ -40,6 +40,10 @@ $(() => {
   const c = (name == "sculpture" || name == "painting") ? '<div class="paintsculpt"></div>' : '<div class="websiteImages"></div>';
   $('body').prepend('<div class="images">' + c + '<div class="endspace"></div> </div>');
 
+  if (['dollhouse', 'dreaming', 'eshetewoldeyilma', 'soyboricua', '_120', 'tocomeofage', 'streetart', 'chapbook'].includes(name)) {
+    $('body').append('<div id="expand" onclick="describe()"> <span id="pull">show project description</span> </div>');
+  }
+
   for (let i = 1; i <= l; i++) {
     if (name == "sculpture" || name == "painting") {
       $('.paintsculpt').append('<div class="container"> <img class="hoverables" src="' + path + i + '.jpg"></img> <div class="overlay"> <div class="text">'
