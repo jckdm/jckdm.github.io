@@ -1,16 +1,13 @@
 $(document).ready(setTimeout(() => {
-  const text = 'jack adam is ... an artist';
-  let soFar = '';
-
-  const visible = document.querySelector('.visible'),
-      invisible = document.querySelector('.invisible');
-      box = document.getElementsByTagName('BODY')[0];
-
-  a(text, soFar, visible, invisible);
-  box.style.display = 'block';
+  a();
+  $('body')[0].style.display = 'block';
 }, 350));
 
-a = (text, soFar, vis, invis) => {
+a = () => {
+  let text = 'jack adam is ... an artist';
+  let soFar = '';
+  const vis = document.querySelector('.visible');
+  const invis = document.querySelector('.invisible');
 
   invis.innerHTML = text;
   const t = setInterval(() => {
@@ -20,12 +17,12 @@ a = (text, soFar, vis, invis) => {
       vis.innerHTML = soFar;
       invis.innerHTML = text;
 
-      if (text.length === 0) clearInterval(t);
-      if (soFar.length === 26) { b(text, soFar, vis, invis); }
+      if (text.length == 0) clearInterval(t);
+      if (soFar.length == 26) { b(text, soFar, vis); }
   }, 110)
 }
 
-b = (text, soFar, vis, invis) => {
+b = (text, soFar, vis) => {
 
     let i = 26;
     const s = document.querySelector('.strike');
@@ -54,10 +51,10 @@ c = (text, soFar, vis) => {
         next.innerHTML = so;
         if (te.length === 0) clearInterval(t);
     }, 55)
-    d(text, soFar, vis);
+    d(text, soFar);
 }
 
-d = (text, soFar, vis) => {
+d = (text, soFar) => {
 
     let i = 16;
     const s = document.querySelector('.strike2');
@@ -76,5 +73,5 @@ d = (text, soFar, vis) => {
       next.innerHTML = ' ... ';
     }, 50)
 
-    setTimeout(() => document.querySelector('.left').style.display = 'block', 2000);
+    setTimeout(() => $('#pages').css('visibility', 'visible'), 2000);
 }

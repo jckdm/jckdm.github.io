@@ -1,7 +1,7 @@
-input, input:before, input:after {
-  -webkit-user-select: initial;
-  -moz-user-select: initial;
-  user-select: initial;
+html {
+  background-color: #0d0d0d;
+  --bigblueborder: 1.5px solid #0000FF;
+  --smallblueborder: 1px solid #0000FF;
 }
 
 body {
@@ -12,16 +12,14 @@ body {
   user-select: none;
   cursor: auto;
   height: calc(125px + 6vw + 10vh);
-  border-top: 1.5px solid #0000FF;
-  border-left: 1.5px solid #0000FF;
+  border-top: var(--bigblueborder);
+  border-left: var(--bigblueborder);
 }
 
 a, a:visited { text-decoration: none; }
 .statement:hover, .galleries:hover, .baritem:hover, .archive:hover, .bigwork:hover, .highlite:hover { text-decoration: underline; cursor: auto; }
 
 .galleries { color: #e6e6e6; }
-
-html { background-color: #0d0d0d; width: 67.5%; }
 
 #header {
   padding-left: calc(15px + 0.5vw);
@@ -41,20 +39,19 @@ html { background-color: #0d0d0d; width: 67.5%; }
 /* used in nav */
 .gap { padding-bottom: calc(3.5vh + 2vw); }
 /* btw home links */
-.homespace { padding-bottom: calc(0.5vh + 2.25vw); }
+.homespace { padding-bottom: calc(3vh + 2.25vw); }
 /* highlites */
 .highgap { padding-bottom: calc(7.5px + 6vh + 2vw); }
-.endspace { padding-bottom: 7.5vh; }
 .hugespace { padding-bottom: 15vh; }
 .indent { padding-right: 5%; }
 
 .modal, .abt-modal {
-  display: none;
+  visibility: hidden;
   position: fixed;
   z-index: 2;
   padding-top: calc(52.5px + 4vh);
-  left: 0;
   top: 0;
+  left: 0;
   right: 0;
   bottom: 0;
   width: 100%;
@@ -70,7 +67,7 @@ html { background-color: #0d0d0d; width: 67.5%; }
   width: 70%;
   overflow: auto;
   overflow-y: auto;
-  border: 1.5px solid #0000FF;
+  border: var(--bigblueborder);
 }
 
 #Phclose, #Arcclose, #Contactclose, #CVclose, #Aboutclose, #Wclose, #Pclose, #SWclose {
@@ -117,14 +114,6 @@ html { background-color: #0d0d0d; width: 67.5%; }
 
 @media only screen and (max-width: 415px) {
 
-  html { width: 80%; }
-
-  body {
-    height: calc(100px + 6vw + 8.5vh);
-    border-top: 1.5px solid #0000FF;
-    border-left: 1.5px solid #0000FF;
-  }
-
   #header {
     padding-left: calc(10px + 0.5vw);
     font-size: calc(12px + 1.25vw);
@@ -139,9 +128,8 @@ html { background-color: #0d0d0d; width: 67.5%; }
   .slash, .highlite { font-size: calc(6px + 0.9vw + 0.9vh); }
 
   .gap { padding-bottom: calc(4.5vh + 2vw); }
-  .homespace { padding-bottom: calc(2.5vh + 1.5vw); }
+  .homespace { padding-bottom: calc(4.5vh + 2vw); }
   .inbspace { padding-bottom: calc(8vh - (6vh - 1vw)); }
   .space { padding-bottom: calc(2vh + 1vw); }
   .medspace { padding-bottom: calc(3.25vh + 1vw); }
-  .endspace { padding-bottom: 5vh; }
 }

@@ -1,28 +1,39 @@
-#body2 {
+html { background-color: #00008B; }
+
+body { border: none; }
+
+#screen {
   background-color: #0d0d0d;
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   height: auto;
-  max-width: 40%;
-  max-height: 85%;
-  display: -webkit-flex;
-  display: flex;
-  margin: auto;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  align-items: center;
+  border: var(--bigblueborder);
+  --smallLetterSpace: 0.075vw;
+  --medLetterSpace: 0.125vw;
 }
 
-#html2 { background-color: #00008B; }
-.invisible { color: transparent; }
-.strike, .strike2 { text-decoration: line-through; }
+#pages {
+  position: relative;
+  visibility: hidden;
+  padding-top: calc(15px + 10vh);
+  padding-left: calc(2vw + 5px);
+}
+
+.invisible { visibility: hidden; }
 .strike { color: #FFC0CB; }
 .strike2 { color: #ADD8E6; }
+.strike, .strike2 { text-decoration: line-through; }
+
+.wrapper {
+  width: calc(25px + 25vw);
+  padding: calc(0.75vh + 2px) calc(2vw + 5px) 0 calc(2vw + 5px);
+  font-size: calc(5px + 2.75vw);
+  letter-spacing: 0.285vw;
+  line-height: 120%;
+}
+
 .about { font-size: calc(10px + 0.125vw + 0.125vh); }
 
 .abt-modal-content {
@@ -30,49 +41,8 @@
   max-height: calc(100vh - 210px);
 }
 
-.wrapper {
-  width: calc(25px + 25vw);
-  padding-top: calc(0.75vh + 2px);
-  padding-left: calc(2vw + 5px);
-  font-size: calc(5px + 2.75vw);
-  letter-spacing: 0.285vw;
-  line-height: 120%;
-}
-
-.left {
-  position: relative;
-  display: none;
-  padding-top: calc(15px + 10vh);
-  padding-left: calc(2vw + 5px);
-  margin: 0 auto;
-}
-
-#check1 {
-  width: calc(1.5vw + 15px);
-  text-align: center;
-  font-size: 13px;
-  margin-right: 0.5vw;
-}
-
-#check2 {
-  width: calc(1.5vw + 15px);
-  text-align: center;
-  font-size: 13px;
-  margin-right: 0.5vw;
-  margin-left: 0.5vw;
-}
-
-#answer {
-  width: calc(1.5vw + 20px);
-  text-align: center;
-  font-size: 13px;
-  margin-left: 0.5vw;
-  margin-right: 0.5vw;
-}
-
 .in { padding-left: 2%; }
 
-/* Create two equal columns that floats next to each other */
 .column1, .column2 {
   float: left;
   width: 40%;
@@ -90,12 +60,12 @@
 .baritem {
   position: absolute;
   font-size: calc(12px + 1.75vw);
-  letter-spacing: 0.125vw;
+  letter-spacing: var(--smallLetterSpace);
 }
 
 .bigwork {
   font-size: calc(14px + 3vw);
-  letter-spacing: 0.15vw;
+  letter-spacing: var(--smallLetterSpace);
 }
 
 .m_c {
@@ -105,21 +75,16 @@
   text-decoration: none;
   font-size: calc(15px + 0.8vw + 0.5vh);
   padding-bottom: calc(1vh + 0.5vw);
-  letter-spacing: 0.075vw;
+  letter-spacing: var(--smallLetterSpace);
 }
 
 .m_cc {
   text-decoration: none;
   font-size: calc(8px + 0.5vw);
-  letter-spacing: 0.075vw;
+  letter-spacing: var(--smallLetterSpace);
 }
 
 @media only screen and (max-width: 415px) {
-
-  #body2 {
-    max-width: 65%;
-    max-height: 65%;
-  }
 
   .wrapper {
     width: calc(25px + 47.5vw);

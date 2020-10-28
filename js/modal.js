@@ -1,5 +1,5 @@
-show = (id) => $('#' + id.substr(0, id.length - 3) + 'Modal').css('display', 'block')
-hide = (id) => $('#' + id.substr(0, id.length - 5) + 'Modal').css('display', 'none')
+show = (id) => $('#' + id.substr(0, id.length - 3) + 'Modal').css('visibility', 'visible')
+hide = (id) => $('#' + id.substr(0, id.length - 5) + 'Modal').css('visibility', 'hidden')
 
 let flag = false;
 
