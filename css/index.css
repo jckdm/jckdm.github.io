@@ -22,8 +22,6 @@ body { border: none; }
 }
 
 .invisible { visibility: hidden; }
-.strike { color: #FFC0CB; }
-.strike2 { color: #ADD8E6; }
 .strike, .strike2 { text-decoration: line-through; }
 
 .wrapper {
@@ -38,7 +36,7 @@ body { border: none; }
 
 .abt-modal-content {
   line-height: 120%;
-  max-height: calc(100vh - 210px);
+  max-height: calc(100vh - 150px);
 }
 
 .in { padding-left: 2%; }
