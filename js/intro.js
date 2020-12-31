@@ -42,7 +42,7 @@ c = (text, soFar, vis) => {
 
     const next = document.querySelector('.next');
     let so = ''
-    let te = ' ... a technologist'
+    let te = ' a technologist'
 
     const t = setInterval(() => {
         so += te.substr(0, 1);
@@ -70,7 +70,7 @@ d = (text, soFar) => {
         i -= 1;
         j -= 1;
       }
-      next.innerHTML = ' ... ';
+      next.innerHTML = ' ';
     }, 50)
 
     setTimeout(() => $('#pages').css('visibility', 'visible'), 2000);
