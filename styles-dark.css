@@ -1,0 +1,16 @@
+a, a:visited { color: #0099FF; }
+
+#topmenu, .section { background-color: #666666; }
+
+#dir, p, span, text, #blurb { color: #FFFAF0; }
+
+.overlay-content, .overlay-content2, .overlay-content-full {
+  background-color: #262626;
+  border: 2.5px dotted #FFFAF0;
+}
+
+#blurb { border: 1px dotted #FFFAF0; }
+
+#head { background-color: #404040; }
+
+#screen { background-image: url('icon/dark.png'); }

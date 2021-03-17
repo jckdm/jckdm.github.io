@@ -1,194 +1,86 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Jack Adam is a designer, artist, and technologist." />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/intro.js"></script>
-    <link rel="stylesheet" type="text/css" href=css/style.css>
-    <link rel="stylesheet" type="text/css" href=css/index.css>
-    <link rel="apple-touch-icon" sizes="180x180" href="pics/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="pics/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="pics/favicon-32x32.png">
-    <link rel="manifest" href="pics/site.webmanifest">
-    <link rel="mask-icon" href="pics/safari-pinned-tab.svg" color="#000000">
-    <meta name="msapplication-TileColor" content="#2b5797">
-    <meta name="theme-color" content="#ffffff">
-    <base target="_blank">
-    <title>Jack Adam</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Jack Adam is a designer, coder, and artist."/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="icon/Favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icon/Favicon/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="icon/Favicon/favicon-32x32.png">
+  <link rel="manifest" href="icon/Favicon/site.webmanifest">
+  <link rel="mask-icon" href="icon/Favicon/safari-pinned-tab.svg" color="#000000">
+  <meta name="msapplication-TileColor" content="#2b5797">
+  <meta name="theme-color" content="#ffffff">'
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript" src="texts.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link id="css" rel="stylesheet" type="text/css" href="styles-light.css">
+  <title>Jack Adam</title>
 </head>
 <body>
-    <div id="screen">
-        <div class='wrapper'>
-            <span class='visible'></span> <br>
-            <span class='invisible'></span>
-            <span class='strike'></span>
-            <span class='next'></span> <br>
-            <span class='strike2'></span>
-        </div>
-        <div id="pages">
-            <a id="AboutBtn" onclick="show($(this).attr('id'))" class="baritem">STATEMENT</a>
-            <div class="homespace"> </div>
-            <a id="CVBtn" onclick="show($(this).attr('id'))" class="baritem">CV</a>
-            <div class="homespace"> </div>
-            <a id="ContactBtn" onclick="show($(this).attr('id'))" class="baritem">CONTACT</a>
-            <div class="medspace"></div>
-            <h2 id="WBtn" onclick="show($(this).attr('id'))" class="bigwork">WORK</h2>
-            <div class="space"> </div>
-        </div>
-    </div>
 
-    <div id="AboutModal" class="abt-modal">
-        <div class="abt-modal-content">
-            <span onclick="hide($(this).attr('id'))" id="Aboutclose">&#8617;&#xFE0E;</span>
-            <div class="row">
-                <div class="in">
-                    <text class="about">October, 2019</text>
-                    <br>
-                    <text class="about">New Haven, CT.</text>
-                    <div class="smallspace"></div>
-                </div>
-                <div class="column1">
-                    <text style="font-style: italic;" class="about">Somewhere in the mountains north of the desert outside of Madrid, the world is ending for no reason in particular.
-                      The air is littered with remnants of life ripped from our homes and our bodies, thrown to the streets in waves and gusts and blasts.</text>
-                    <div class="space"> </div>
-                    <text class="about">In my dreams, everything is silent.
-                      Silent, but not unfamiliar.
-                      My dreams reflect on ocean-side restaurants, fruit and vegetable markets, industrial zones, public schools and their stairwells, trams across mountains, skate parks and skate shops, weekend homes, and communal kitchens.
-                      In waking, I am filled with a longing for these surreal, visceral, yet rational images.
-                      I don’t care if I cannot capture them, for seeing is the most thrilling act.</text>
-                    <div class="smallspace"> </div>
-                    <text class="about">In my dreams, I’m not myself but a reflection of my experiences aggregated into a relational being.
-                      I’m not myself but a copy who rationally believes that he knows where he is, who he is.
-                      He is washed ashore to worlds navigable through intuition—a feeling rooted in memories of a place quite like this one, desire for a feeling quite like this one.</text>
-                    <div class="smallspace"> </div>
-                    <text class="about">This is the world of the uncanny, where the familiar is the terrifying.
-                      I want to live forever in this world—a world where I do not need to capture images because it is enough to feel them.
-                      Here, I understand my dreams and images in the same manner: they are two halves of the ‘double’; they are visions of terror.</text>
-                    <div class="smallspace"> </div>
-                </div>
-                <div class="column2">
-                    <text class="about">I see image-making as a process of dematerialization: each time we consume an image, the imaged becomes more artificial—more imagined.
-                      I make images of streets, of homes, of intimacy within the urban environment.
-                      I create with ink, wood, digital images, fabric, and found materials.
-                      I dematerialize these things out of a desire for familiarity—and I understand this desire as a state of being.</text>
-                    <div class="smallspace"> </div>
-                    <text class="about">Similarly, I understand ‘fear’ as a place, ‘memory’ as an object, and ‘home’ as a verb which oscillates between fear of change and a lurking possibility that life is not static, that one day things will have to change.
-                      The synthesis of these ideas is ‘possibility.’</text>
-                    <div class="smallspace"></div>
-                    <text class="about">As such, I understand these imagined places as being bordered by fear yet constructed through love (for I am always home).
-                      In my dreams, it is me against the world, up against the world like face-to-face.
-                      My art examines this confusion of place, of belonging, and reflects on intimacy with(in) place.
-                      My images, then, attempt to understand these comfortable and rational—yet relational and removed—projections of longing for a more dimensional existence.</text>
-                    <div class="medspace"></div>
-                    <text style="font-style: italic;" class="about">Maybe I’ve never been to Madrid; maybe I’ll never visit.
-                      If I only ever see those mountains in my dreams, well, I’ll always have a feeling upon return—a feeling that I’ve been there, one way or the other.
-                      Somewhere—somewhere in the mountains north of the desert outside of Madrid—the sun is rising. And then...</text>
-                    <div class="smallspace"></div>
-                </div>
-            </div>
-        </div>
-    </div>
+  <div id="topmenu"><text id="dir">jackadam/</text></div>
+  <img id="mode" src="icon/Black-Bomb.png" onclick="mode()">
 
-    <div id="CVModal" class="modal">
-        <div class="modal-content">
-            <span onclick="hide($(this).attr('id'))" id="CVclose">&#8617;&#xFE0E;</span>
-            <a href="pics/Resume.pdf" target="_blank" id="RESUME" class="m_c">Résumé</a>
-            <div id="checked" class="gap"> </div>
-            <a href="pics/CV.pdf" target="_blank" id="CV" class="m_c">CV</a>
-            <div class="medspace"> </div>
-        </div>
-    </div>
+  <div id="subscreen"></div>
 
-    <div id="ContactModal" class="modal">
-        <div class="modal-content">
-            <span onclick="hide($(this).attr('id'))" id="Contactclose">&#8617;&#xFE0E;</span>
-            <span class="m_c">jack.adam@yale.edu</span>
-            <div class="gap"> </div>
-            <span class="m_c">instagram: @jack.adam</span>
-            <div class="highgap"> </div>
-            <span class="m_cc">website custom by myself</span>
-        </div>
+  <div class="overlay">
+    <div class="overlay-content">
+      <div id="head">
+        <img id="close" src="icon/Close.png" onclick="toggletab('hide')">
+        <span class="title"></span>
+      </div>
+      <div id="content">
+      </div>
     </div>
+  </div>
 
-    <div id="WModal" class="modal">
-        <div class="modal-content">
-            <span onclick="hide($(this).attr('id'))" id="Wclose">&#8617;&#xFE0E;</span>
-            <a id="ArcBtn" onclick="show($(this).attr('id'))" class="archive">View Full Archive</a>
-            <div class="gap"> </div>
-            <div id="ArcModal" class="modal">
-                <div class="modal-content">
-                    <span onclick="hide($(this).attr('id'))" id="Arcclose">&#8617;&#xFE0E;</span>
-                    <a id="PhBtn" onclick="show($(this).attr('id'))" class="galleries">Photography</a>
-                    <div class="gap"></div>
-                    <div id="PhModal" class="modal">
-                        <div class="modal-content">
-                            <span onclick="hide($(this).attr('id'))" id="Phclose">&#8617;&#xFE0E;</span>
-                            <a id="PBtn" onclick="show($(this).attr('id'))" class="galleries">Projects</a>
-                            <div class="gap"> </div>
-                            <div id="PModal" class="modal">
-                                <div class="modal-content">
-                                    <span onclick="hide($(this).attr('id'))" id="Pclose">&#8617;&#xFE0E;</span>
-                                    <a href="doll-house" target="_self" class="galleries">Doll House</a>
-                                    <div class="gap"> </div>
-                                    <a href="dreaming" target="_self" class="galleries">Dreaming</a>
-                                    <div class="gap"> </div>
-                                    <a href="eshete-woldeyilma" target="_self" class="galleries">Eshete Woldeyilma</a>
-                                    <div class="gap"> </div>
-                                    <a href="soy-boricua" target="_self" class="galleries">Soy Boricua</a>
-                                    <div class="gap"> </div>
-                                    <a href="120" target="_self" class="galleries">120</a>
-                                    <div class="gap"> </div>
-                                    <a href="come-of-age" target="_self" class="galleries">Come of Age</a>
-                                    <div class="medspace"> </div>
-                                </div>
-                            </div>
-                            <a id="SWBtn" onclick="show($(this).attr('id'))" class="galleries">Selected Works</a>
-                            <div id="SWModal" class="modal">
-                                <div class="modal-content">
-                                    <span onclick="hide($(this).attr('id'))" id="SWclose">&#8617;&#xFE0E;</span>
-                                    <a href="portraits" target="_self" class="galleries">Portraits</a>
-                                    <div class="gap"> </div>
-                                    <a href="self-portraits" target="_self" class="galleries">Self-portraits</a>
-                                    <div class="gap"> </div>
-                                    <a href="fashion" target="_self" class="galleries">Fashion</a>
-                                    <div class="gap"> </div>
-                                    <a href="still-life" target="_self" class="galleries">Still Life</a>
-                                    <div class="gap"> </div>
-                                    <a href="street" target="_self" class="galleries">Street</a>
-                                    <div class="medspace"> </div>
-                                </div>
-                            </div>
-                            <div class="medspace"> </div>
-                        </div>
-                    </div>
-                    <a href="painting" target="_self" class="galleries">Painting</a>
-                    <div class="gap"> </div>
-                    <a href="drawing" target="_self" class="galleries">Drawing</a>
-                    <div class="gap"> </div>
-                    <a href="sculpture" target="_self" class="galleries">Sculpture</a>
-                    <div class="gap"> </div>
-                    <a href="digital" target="_self" class="galleries">Digital</a>
-                    <div class="gap"> </div>
-                    <a href="street-art" target="_self" class="galleries">Street Art</a>
-                    <div class="medspace"> </div>
-                </div>
-            </div>
-            <span class="slash">/</span><a href="120" target="_self" class="highlite">medium-format film images of urban intimacy</a>
-            <div class="highgap"></div>
-            <span class="slash">/</span><a href="thesis" target="_blank" class="highlite">thesis: a phenomenological approach to technology</a>
-            <div class="highgap"></div>
-            <span class="slash">/</span><a href="tianatime" target="_blank" class="highlite">virtual, globalized art exhibition</a>
-            <div class="highgap"></div>
-            <span class="slash">/</span><a href="chapbook" target="_self" class="highlite">hand-bound, typeset chapbook</a>
-            <div class="highgap"></div>
-            <span class="slash">/</span><a href="https://indypendent.org/2020/05/how-to-say-goodbye-to-a-stranger/" target="_blank" class="highlite">essay about community (in <i>The Indypendent</i>)</a>
-            <div class="iSpace"></div>
-        </div>
+  <div class="overlay-full">
+    <div class="overlay-content-full">
+      <div id="head">
+        <img id="close" src="icon/Left.png" onclick="togglefull('hide')">
+        <span class="title-full"></span>
+      </div>
+      <div id="content-full">
+      </div>
     </div>
+  </div>
 
-    <script src="js/home.js"></script>
-    <script src="js/modal.js"></script>
+  <div id="screen">
+    <div class="container">
+      <div class="item" onclick="toggletab('Contact');">
+        <img class="icon" src="icon/Contact.png">
+        <br>
+        <span class="section">Contact</span>
+      </div>
+      <div class="item" onclick="toggletab('Statement')">
+        <img class="icon" src="icon/Statement.png">
+        <br>
+        <span class="section">Statement</span>
+      </div>
+      <div class="item" onclick="toggletab('Tech');">
+        <img class="icon" src="icon/Folder.png">
+        <br>
+        <span class="section" id="folder">Tech</span>
+      </div>
+      <div class="item" onclick="toggletab('Art');">
+        <img class="icon" src="icon/Folder.png">
+        <br>
+        <span class="section" id="folder">Art</span>
+      </div>
+      <div class="item" onclick="toggletab('Design');">
+        <img class="icon" src="icon/Folder.png">
+        <br>
+        <span class="section" id="folder">Design</span>
+      </div>
+      <div class="item" onclick="toggletab('Writing');">
+        <img class="icon" src="icon/Folder.png">
+        <br>
+        <span class="section" id="folder">Writing</span>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>

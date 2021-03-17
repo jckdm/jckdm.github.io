@@ -1,0 +1,16 @@
+a, a:visited { color: #0000FF; }
+
+#topmenu, .section { background-color: #FFFAF0; }
+
+#dir, p, span, text, #blurb { color: #262626; }
+
+.overlay-content, .overlay-content2, .overlay-content-full {
+  background-color: #FFFAF0;
+  border: 2.5px dotted #000000;
+}
+
+#blurb { border: 1px dotted #262626; }
+
+#head { background-color: #333333; }
+
+#screen { background-image: url('icon/light.png'); }
