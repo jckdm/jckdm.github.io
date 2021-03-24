@@ -185,7 +185,7 @@ span {
 
 .subitem { margin: 25px; }
 
-.subitem:hover, .item:hover, #close:hover, .arrows:hover, #mode:hover { cursor: pointer; }
+.gallery:hover, .subitem:hover, .item:hover, #close:hover, .arrows:hover, #mode:hover { cursor: pointer; }
 
 .section { padding: 1.5px 5px 1.5px 5px; }
 
