@@ -3,10 +3,10 @@ const sizes = {
   Painting: 9, Drawing: 8, Sculpture: 4, StreetArt: 8,
   DollHouse: 20, Dreaming: 12, EsheteWoldeyilma: 13, _120: 9, Portraits: 10, StillLife: 15, Street: 10,
   Chapbook: 6, Zine: 7, FilmTranslation: 5,
-  DigitalDistancing: 9, Tiled: 7, TianaTime: 11, CSSParser: 2
+  DigitalDistancing: 9, Tiled: 7, TianaTime: 11, Screensavers: 4, CSSParser: 2
 }
 
-const Tech = ['Digital Distancing', 'Tiled', 'Tiana/Time', 'CSS Parser'];
+const Tech = ['Digital Distancing', 'Tiled', 'Tiana/Time', 'Screensavers', 'CSS Parser'];
 const Design = ['Zine', 'Chapbook', 'Film Translation'];
 const Writing = ['How to Say Goodbye to a Stranger', 'We Have Seen the Best of Our Times'];
 const Art = ['Painting', 'Drawing', 'Sculpture', 'Street Art'];
@@ -48,6 +48,7 @@ const WeHaveSeentheBestofOurTimes = 'BROOKLYN — January 2021.<br><br>During t
 const TianaTime = '<i>Tiana/Time</i> is a virtual art exhibition and catalogue designed for a global audience.<br><br>Presented in three parts, the exhibition can be viewed live, chronologically, or as an archive. Over the course of 24 hours, the live gallery cycles through the exhibition\'s 180 images, picking the current image based on a user\'s time zone. The chronological gallery includes poetry and audio alongside the images which are divided into 9 segments corresponding to the time of day they were captured. The archive divides images by the country in which they were captured, and allows users to query these categories using tags such as "People," "Water," and "Architecture."<br><br>The exhibition opened on May 1, 2020 amid the Covid-19 outbreak in the U.S., and at the end of a remotely-conducted spring semester at Yale University. At a time when our peers and colleagues were spread across the globe, and the digital capacity of our university was stretched, the exhibition sought to respond to the moment.<br><br><b><a href="https://github.com/jckdm/tianatime" target="_blank">Check out the code</a> or <a href="https://jackadam.cc/tianatime" target="_blank">view the full project.</a><b>';
 const DigitalDistancing = '<i>Digital Distancing</i> is a senior project in <a href="https://c2.cs.yale.edu/" target="_blank">Computing & the Arts</a> at Yale University.<br><br>The project considers the relationship between distance and technology in the era of social distancing in order to define a framework for understanding ourselves through our data. It is comprised of a journal, a pair of data collection and extraction tools, and visualizations of this data.<br><br><b><a href="https://github.com/jckdm/thesis" target="_blank">Check out the code</a> or <a href="https://jackadam.cc/thesis" target="_blank">view the full project.</a><b>';
 const Tiled = '<i>Tiled</i> is a text abstraction tool for ART 469, Spring 2021 at Yale University. The tool both figuratively and literally considers the shape of language.<br><br><b><a href="https://github.com/jckdm/tiled" target="_blank">Check out the code</a> or <a href="https://jackadam.cc/tiled" target="_blank">view the full project.</a><b>';
+const Screensavers = 'A pair of endlessly looping screensavers that reflect on time, distance, and the process of looking.<br><br><b><a href="https://jackadam.cc/skyline" target="_blank">Passing City Skyline</a><br><br><a href="https://jackadam.cc/rain" target="_blank">Rainy ASCII Window</a></b>';
 const CSSParser = '<i>CSS Parser</i> is a tool that identifies, removes, and/or defines unused classes and IDs in .css files.<br><br>The tool prompts a user for paths to .css and .html files before printing the undefined classes and IDs in each file. It then prints the unused classes and IDs with their corresponding file names and line numbers. Finally, the tool re-writes the given .css files without these unused classes and IDs, adding definitions for previously undefined style rules.<br><br><b><a href="https://github.com/jckdm/CSS-parser" target="_blank">Check out the code</a>.<b>';
 
 const Drawing = '';
