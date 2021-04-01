@@ -23,7 +23,7 @@ toggletab = (id) => {
     if (id == 'Contact' || id == 'Statement') { $('#content')[0].innerHTML = selected; }
     else {
       for (let i = 0; i < selected.length; i++) {
-        $('#content' + two)[0].innerHTML += '<div class="subitem" class="item" onclick="togglefull(' + id + ', ' + i + ');"><img class="icon" src="icon/' + id + '.png"><br><span class="section" id="folder">' + selected[i] + '</span></div>';
+        $('#content' + two)[0].innerHTML += '<div class="subitem" class="item" onclick="togglefull(' + id + ', ' + i + ');"><img class="icon" src="icon/' + id + '.png"><span class="section" id="folder">' + selected[i] + '</span></div>';
       }
     }
     $('.overlay' + two).css('display', 'block');
