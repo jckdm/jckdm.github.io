@@ -176,23 +176,34 @@ span {
   margin: 0;
 }
 
-.item, .subitem {
+.item {
   text-align: center;
-  display: inline-block;
+  /* display: inline-block; */
+  box-sizing: border-box;
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
-.item { margin: 55px 25px 55px 25px; }
+.item { margin: 55px 25px; }
 
-.subitem { margin: 25px; }
+.subitem {
+  margin: 25px;
+  text-align: center;
+  display: inline-block;
+  border: 1px solid red;
+}
 
 .gallery:hover, .subitem:hover, .item:hover, #close:hover, .arrows:hover, #mode:hover { cursor: pointer; }
 
-.section { padding: 1.5px 5px 1.5px 5px; }
+.section { padding: 1.5px 5px; border: 1px solid blue; }
 
 .icon {
   padding-top: 10px;
   width: 60px;
   vertical-align: middle;
+  border: 1px solid green;
 }
 
 #mode {
@@ -227,7 +238,7 @@ span {
   span { font-size: 18px; }
   .item {
     width: 100px;
-    margin: 50px 10px 50px 10px;
+    margin: 50px 10px;
   }
   .overlay-content, .overlay-content2 {
     width: 70%;
