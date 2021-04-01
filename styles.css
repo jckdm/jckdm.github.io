@@ -234,4 +234,5 @@ span {
     height: 75%;
   }
   .subitem { margin: 10px; }
+  .subitem .icon { padding-bottom: 0; }
 }
