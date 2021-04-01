@@ -195,11 +195,6 @@ span {
   vertical-align: middle;
 }
 
-.selficon {
-  padding-top: 10px;
-  width: 100px;
-}
-
 #mode {
   position: fixed;
   top: 5px;
@@ -235,7 +230,8 @@ span {
     margin: 50px 10px 50px 10px;
   }
   .overlay-content, .overlay-content2 {
-    width: 75%;
+    width: 70%;
     height: 75%;
   }
+  .subitem { margin: 10px; }
 }
