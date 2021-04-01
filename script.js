@@ -13,7 +13,7 @@ toggletab = (id) => {
     let two = '';
 
     if (id == 'Art') {
-      $('#content')[0].innerHTML += '<div class="subitem" class="item" onclick="toggletab(\'Photography\');"><img class="icon" src="icon/Folder.png"><br><span class="section">Photography</span></div>';
+      $('#content')[0].innerHTML += '<div class="subitem" class="item" onclick="toggletab(\'Photography\');"><img class="icon" src="icon/Folder.png"><span class="section">Photography</span></div>';
     }
     if (id == 'Photography') {
       $('body').append('<div class="overlay2"><div class="overlay-content2"><div id="head"><img id="close" src="icon/Close.png" onclick="toggletab(\'hide2\')"><span class="title2"></span></div><div id="content2"></div></div></div>');
