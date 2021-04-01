@@ -1,4 +1,28 @@
-body { font-family: Times, serif; }
+@font-face {
+  font-family: Times-LT;
+  src: url(TimesLTStd-Roman.otf);
+}
+
+@font-face {
+  font-family: Times-LT;
+  src: url(TimesLTStd-Bold.otf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Times-LT;
+  src: url(TimesLTStd-Italic.otf);
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Times-LT;
+  src: url(TimesLTStd-BoldItalic.otf);
+  font-weight: bold;
+  font-style: italic;
+}
+
+body { font-family: Times-LT, Times, serif; }
 
 #subscreen { z-index: 1; }
 #screen { z-index: 2; }
@@ -13,7 +37,7 @@ body { font-family: Times, serif; }
   font-size: 30px;
   padding-left: 10px;
   position: absolute;
-  top: 7.5px;
+  top: 10px;
   left: 5px;
 }
 
@@ -27,11 +51,7 @@ body { font-family: Times, serif; }
   border-top-right-radius: 20px;
 }
 
-span {
-  font-size: 20px;
-  vertical-align: middle;
-}
-
+span { font-size: 20px; }
 .small { font-size: 12px; }
 
 .overlay, .overlay-full, .fullscreen, .overlay2 {
@@ -177,13 +197,11 @@ span {
 }
 
 .item {
-  text-align: center;
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin: 55px 25px;
 }
-
-.item { margin: 55px 25px; }
 
 .subitem {
   margin: 25px;
@@ -193,12 +211,14 @@ span {
 
 .gallery:hover, .subitem:hover, .item:hover, #close:hover, .arrows:hover, #mode:hover { cursor: pointer; }
 
-.section { display: block; padding: 1.5px 5px; }
+.section {
+  display: block;
+  padding: 4px 5px 0.5px 5px;
+}
 
 .icon {
   padding-top: 10px;
   width: 60px;
-  vertical-align: middle;
 }
 
 #mode {
@@ -240,5 +260,4 @@ span {
     height: 75%;
   }
   .subitem { margin: 10px; }
-  .subitem .icon { padding-bottom: 0; }
 }
