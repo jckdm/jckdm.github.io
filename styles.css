@@ -1,23 +1,23 @@
 @font-face {
   font-family: Times-LT;
-  src: url(TimesLTStd-Roman.otf);
+  src: url(fonts/TimesLTStd-Roman.otf);
 }
 
 @font-face {
   font-family: Times-LT;
-  src: url(TimesLTStd-Bold.otf);
+  src: url(fonts/TimesLTStd-Bold.otf);
   font-weight: bold;
 }
 
 @font-face {
   font-family: Times-LT;
-  src: url(TimesLTStd-Italic.otf);
+  src: url(fonts/TimesLTStd-Italic.otf);
   font-style: italic;
 }
 
 @font-face {
   font-family: Times-LT;
-  src: url(TimesLTStd-BoldItalic.otf);
+  src: url(fonts/TimesLTStd-BoldItalic.otf);
   font-weight: bold;
   font-style: italic;
 }
