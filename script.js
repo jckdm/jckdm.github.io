@@ -1,29 +1,57 @@
+// stack to emulate/follow window.history
+let histack = [];
+
+// handle nav between levels via browser back arrow
+$(() => {
+  if (history && history.pushState) {
+
+    history.pushState({level: 1}, '');
+    histack.push(1);
+
+    $(window).on('popstate', () => {
+      const prev = histack.pop();
+      if (prev == 2) { toggletab('hide', true); }
+      else if (prev == 3) { toggletab('hide2', true); }
+      else if (prev == 4) { togglefull('hide', true); }
+    });
+  }
+})
+
 // hide / show first-level folders
-toggletab = (id) => {
+toggletab = (id, flag) => {
   if (id == 'hide') {
     $('#content').scrollTop(0);
     $('#content')[0].innerHTML = '';
     $('.overlay').css('display', 'none');
+    if (!flag) { history.back(); }
   }
   else if (id == 'hide2') {
     $('.overlay2').remove();
+    if (!flag) { history.back(); }
   }
   else {
     const selected = eval(id);
     let two = '';
 
+    if (id != 'Photography') {
+      history.pushState({level: 2}, '');
+      histack.push(2);
+    }
+
     if (id == 'Art') {
-      $('#content')[0].innerHTML += '<div class="subitem" class="item" onclick="toggletab(\'Photography\');"><img class="icon" src="icon/Folder.png"><span class="section">Photography</span></div>';
+      $('#content')[0].innerHTML += '<div class="subitem" class="item" onclick="toggletab(\'Photography\', false);"><img class="icon" src="icon/Folder.png"><span class="section">Photography</span></div>';
     }
     if (id == 'Photography') {
-      $('body').append('<div class="overlay2"><div class="overlay-content2"><div id="head"><img id="close" src="icon/Close.png" onclick="toggletab(\'hide2\')"><span class="title2"></span></div><div id="content2"></div></div></div>');
+      $('body').append('<div class="overlay2"><div class="overlay-content2"><div id="head"><img id="close" src="icon/Close.png" onclick="toggletab(\'hide2\', false)"><span class="title2"></span></div><div id="content2"></div></div></div>');
       two = '2';
+      history.pushState({level: 3}, '');
+      histack.push(3);
     }
 
     if (id == 'Contact' || id == 'Statement') { $('#content')[0].innerHTML = selected; }
     else {
       for (let i = 0; i < selected.length; i++) {
-        $('#content' + two)[0].innerHTML += '<div class="subitem" class="item" onclick="togglefull(' + id + ', ' + i + ');"><img class="icon" src="icon/' + id + '.png"><span class="section" id="folder">' + selected[i] + '</span></div>';
+        $('#content' + two)[0].innerHTML += '<div class="subitem" class="item" onclick="togglefull(' + id + ', false, ' + i + ');"><img class="icon" src="icon/' + id + '.png"><span class="section" id="folder">' + selected[i] + '</span></div>';
       }
     }
     $('.overlay' + two).css('display', 'block');
@@ -35,7 +63,7 @@ let blurb = false;
 let pics = true;
 
 // toggle top-level galleries
-togglefull = (id, n = null) => {
+togglefull = (id, flag, n = null) => {
   if (id == 'hide') {
     if (pics) {
       $('.pic-container').remove();
@@ -44,6 +72,8 @@ togglefull = (id, n = null) => {
       $('#blurb')[0].remove();
       blurb = false;
     }
+    if (!flag) { history.back(); }
+
     $('#content-full').scrollTop(0);
     $('.overlay-full').css('display', 'none');
   }
@@ -54,6 +84,9 @@ togglefull = (id, n = null) => {
     else if (selected == 'Tiana/Time') { selected = title.replace(/[\/]/, ''); }
     const captblurb = eval(selected);
     const l = sizes[selected];
+
+    history.pushState({level: 4}, '');
+    histack.push(4);
 
     if (selected == '_120') { selected = '120'; }
 
