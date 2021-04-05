@@ -3,14 +3,41 @@ let histack = [];
 
 // handle nav between levels via browser back arrow
 $(() => {
-  history.pushState({ level: 1 }, '');
-  histack.push(1);
+  history.pushState({page: 'Home', level: 1}, '');
+  histack.push({page: 'Home', level: 1});
+  console.log(histack);
 
   $(window).on('popstate', () => {
     const prev = histack.pop();
-    if (prev === 2) { toggletab('hide', true); }
-    else if (prev === 3) { toggletab('hide2', true); }
-    else if (prev === 4) { togglefull('hide', true); }
+
+    console.log(histack);
+    console.log(prev.level, ' --> ', history.state.level);
+
+    if (prev.level == 1 && history.state.level == 2) {
+      toggletab(history.state.page, true);
+    }
+    else if (prev.level == 2 && history.state.level == 3) {
+      toggletab(history.state.page, true);
+    }
+    else if (prev.level == 2 && history.state.level == 4) {
+      togglefull(history.state.page, true);
+    }
+    else if (prev.level == 3 && history.state.level == 4) {
+      togglefull(history.state.page, true);
+    }
+
+    else if (prev.level == 2 && history.state.level == 1) {
+      toggletab('hide', true);
+    }
+    else if (prev.level == 3 && history.state.level == 2) {
+      toggletab('hide2', true);
+    }
+    else if (prev.level == 4 && history.state.level == 2) {
+      togglefull('hide', true);
+    }
+    else if (prev.level == 4 && history.state.level == 3) {
+      togglefull('hide', true);
+    }
   });
 
 })
@@ -31,10 +58,10 @@ toggletab = (id, flag) => {
     const selected = TEXTS[id];
     let two = '';
 
-    if (id !== 'Photography') {
-      history.pushState({ level: 2 }, '');
-      histack.push(2);
-    }
+    const lev = (id == 'Photography') ? 3 : 2;
+    history.pushState({page: id, level: lev}, '')
+    histack.push({page: id, level: lev});
+    console.log(histack);
 
     if (id === 'Art') {
       $('#content')[0].innerHTML += `<div class="subitem" class="item" onclick="toggletab('Photography', false);"><img class="icon" src="icon/Folder.png"><span class="section">Photography</span></div>`;
@@ -42,8 +69,6 @@ toggletab = (id, flag) => {
     if (id === 'Photography') {
       $('body').append(`<div class="overlay2"><div class="overlay-content2"><div id="head"><img id="close" src="icon/Close.png" onclick="toggletab('hide2', false)"><span class="title2"></span></div><div id="content2"></div></div></div>`);
       two = '2';
-      history.pushState({ level: 3 }, '');
-      histack.push(3);
     }
 
     if (id === 'Contact' || id === 'Statement') { $('#content')[0].innerHTML = selected; }
@@ -76,15 +101,17 @@ togglefull = (id, flag, n = null) => {
     $('.overlay-full').css('display', 'none');
   }
   else {
-    const title = TEXTS[id][n];
+    // if opening for first time, index into array, otherwise use given id
+    const title = Array.isArray(TEXTS[id]) ? TEXTS[id][n] : id;
     let selected = title.replace(/\s/g, '');
     if (selected === '120') { selected = '_120'; }
     else if (selected === 'Tiana/Time') { selected = title.replace(/[\/]/, ''); }
     const captblurb = TEXTS[selected];
     const l = TEXTS.sizes[selected];
 
-    history.pushState({ level: 4 }, '');
-    histack.push(4);
+    history.pushState({page: title, level: 4}, '');
+    histack.push({page: title, level: 4});
+    console.log(histack);
 
     if (selected === '_120') { selected = '120'; }
 
