@@ -8,11 +8,11 @@ $(() => {
 
   $(window).on("popstate", () => {
     const prev = histack.pop();
-    if (prev == 2) {
+    if (prev === 2) {
       toggletab("hide", true);
-    } else if (prev == 3) {
+    } else if (prev === 3) {
       toggletab("hide2", true);
-    } else if (prev == 4) {
+    } else if (prev === 4) {
       togglefull("hide", true);
     }
   });
@@ -20,32 +20,33 @@ $(() => {
 
 // hide / show first-level folders
 toggletab = (id, flag) => {
-  if (id == "hide") {
+  if (id === "hide") {
     $("#content").scrollTop(0);
     $("#content")[0].innerHTML = "";
     $(".overlay").css("display", "none");
     if (!flag) {
       history.back();
     }
-  } else if (id == "hide2") {
+  } else if (id === "hide2") {
     $(".overlay2").remove();
     if (!flag) {
       history.back();
     }
   } else {
     const selected = TEXTS[id];
+    if (id == undefined) return;
     let two = "";
 
-    if (id != "Photography") {
+    if (id !== "Photography") {
       history.pushState({ level: 2 }, "");
       histack.push(2);
     }
 
-    if (id == "Art") {
+    if (id === "Art") {
       $("#content")[0].innerHTML +=
         '<div class="subitem" class="item" onclick="toggletab(\'Photography\', false);"><img class="icon" src="icon/Folder.png"><span class="section">Photography</span></div>';
     }
-    if (id == "Photography") {
+    if (id === "Photography") {
       $("body").append(
         '<div class="overlay2"><div class="overlay-content2"><div id="head"><img id="close" src="icon/Close.png" onclick="toggletab(\'hide2\', false)"><span class="title2"></span></div><div id="content2"></div></div></div>'
       );
@@ -54,12 +55,31 @@ toggletab = (id, flag) => {
       histack.push(3);
     }
 
-    if (id == "Contact" || id == "Statement") {
+    if (id === "Contact" || id === "Statement") {
       $("#content")[0].innerHTML = selected;
     } else {
       for (let i = 0; i < selected.length; i++) {
-        $("#content" + two)[0].innerHTML +=
-          '<div class="subitem" class="item" onclick="togglefull(\'' +
+        let div = document.createElement("div");
+        div.classList.add("subitem", "item");
+        //div.onclick = `togglefull('${id}', false, i)`;
+        //JEC: I'd recommend something like the above, but togglefull would need to
+        // return a function. You could/should, but you'll have to switch over
+        // all of these sections from evaluated text to JS.
+        div.setAttribute("onclick", `togglefull('${id}', false, ${i})`);
+
+        const img = document.createElement("img");
+        img.classList.add("icon");
+        img.src = `icon/${id}.png`;
+
+        const span = document.createElement("span");
+        span.classList.add("section");
+        span.id = "folder";
+        span.innerHTML = selected[i];
+        div.append(img, span);
+
+        $("#content" + two)[0].appendChild(div);
+        /*
+        '<div class="subitem" class="item" onclick="togglefull(\'' +
           id +
           "', false, " +
           i +
@@ -68,6 +88,7 @@ toggletab = (id, flag) => {
           '.png"><span class="section" id="folder">' +
           selected[i] +
           "</span></div>";
+        */
       }
     }
     $(".overlay" + two).css("display", "block");
@@ -80,7 +101,7 @@ let pics = true;
 
 // toggle top-level galleries
 togglefull = (id, flag, n = null) => {
-  if (id == "hide") {
+  if (id === "hide") {
     if (pics) {
       $(".pic-container").remove();
     }
@@ -95,20 +116,22 @@ togglefull = (id, flag, n = null) => {
     $("#content-full").scrollTop(0);
     $(".overlay-full").css("display", "none");
   } else {
+    console.log("trying " + id + " >n? " + id[n]);
     const title = TEXTS[id][n];
     let selected = title.replace(/\s/g, "");
-    if (selected == "120") {
+    if (selected === "120") {
       selected = "_120";
-    } else if (selected == "Tiana/Time") {
+    } else if (selected === "Tiana/Time") {
       selected = title.replace(/[\/]/, "");
     }
+    console.log("full > selected: " + selected);
     const captblurb = TEXTS[selected];
     const l = TEXTS.sizes[selected];
 
     history.pushState({ level: 4 }, "");
     histack.push(4);
 
-    if (selected == "_120") {
+    if (selected === "_120") {
       selected = "120";
     }
 
@@ -157,17 +180,46 @@ togglefull = (id, flag, n = null) => {
 
 // display fullsize images with options for cycling thru images
 fullsize = (i, ii) => {
+  //JEC: PS the double-ii here isn't used
   const s = i.split("/");
   const si = TEXTS.sizes[s[s.length - 2]];
-  $("body").append(
-    '<div class="fullscreen"><img src="icon/Close.png" onclick="this.parentElement.remove();" class="arrows" id="exit"><img src="icon/Left.png" onclick="move(\'left\', ' +
+  const div = document.createElement("div");
+  div.classList.add("fullscreen");
+
+  const eimg = document.createElement("img");
+  eimg.id = "exit";
+  eimg.classList.add("arrows");
+  eimg.src = "icon/Close.png";
+  eimg.setAttribute("onclick", "this.parentElement.remove();");
+
+  const limg = document.createElement("img");
+  limg.id = "left";
+  limg.classList.add("arrows");
+  limg.src = "icon/Left.png";
+  limg.setAttribute("onclick", `move(\'left\', ${si})`);
+
+  const rimg = document.createElement("img");
+  rimg.id = "right";
+  rimg.classList.add("arrows");
+  rimg.src = "icon/Right.png";
+  rimg.setAttribute("onclick", `move(\'rightt\', ${si})`);
+
+  const fimg = document.createElement("img");
+  fimg.id = "fullimage";
+  fimg.src = i;
+
+  div.append(eimg, limg, rimg, fimg);
+
+  $("body").append(div);
+  /*   '<div class="fullscreen"><img src="icon/Close.png" onclick="this.parentElement.remove();"
+     class="arrows" id="exit"><img src="icon/Left.png" onclick="move(\'left\', ' +
       si +
       ');" class="arrows" id="left"><img src="icon/Right.png" onclick="move(\'right\', ' +
       si +
       ');" class="arrows" id="right"><img src="' +
       i +
       '" id="fullimage"></div>'
-  );
+  ); */
 };
 
 // move left or right through fullsize images
@@ -175,7 +227,7 @@ move = (d, s) => {
   const p = $("#fullimage")[0].src.split("/");
   let i = +p.pop().split(".")[0];
 
-  if (d == "left") {
+  if (d === "left") {
     if (i > 0) {
       i -= 1;
     } else {
