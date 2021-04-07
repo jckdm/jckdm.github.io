@@ -13,29 +13,29 @@ $(() => {
     console.log(histack);
     console.log(prev.level, ' --> ', history.state.level);
 
-    if (prev.level == 1 && history.state.level == 2) {
+    if (prev.level === 1 && history.state.level === 2) {
       toggletab(history.state.page, true);
     }
-    else if (prev.level == 2 && history.state.level == 3) {
+    else if (prev.level === 2 && history.state.level === 3) {
       toggletab(history.state.page, true);
     }
-    else if (prev.level == 2 && history.state.level == 4) {
+    else if (prev.level === 2 && history.state.level === 4) {
       togglefull(history.state.page, true);
     }
-    else if (prev.level == 3 && history.state.level == 4) {
+    else if (prev.level === 3 && history.state.level === 4) {
       togglefull(history.state.page, true);
     }
 
-    else if (prev.level == 2 && history.state.level == 1) {
+    else if (prev.level === 2 && history.state.level === 1) {
       toggletab('hide', true);
     }
-    else if (prev.level == 3 && history.state.level == 2) {
+    else if (prev.level === 3 && history.state.level === 2) {
       toggletab('hide2', true);
     }
-    else if (prev.level == 4 && history.state.level == 2) {
+    else if (prev.level === 4 && history.state.level === 2) {
       togglefull('hide', true);
     }
-    else if (prev.level == 4 && history.state.level == 3) {
+    else if (prev.level === 4 && history.state.level === 3) {
       togglefull('hide', true);
     }
   });
@@ -58,23 +58,75 @@ toggletab = (id, flag) => {
     const selected = TEXTS[id];
     let two = '';
 
-    const lev = (id == 'Photography') ? 3 : 2;
+    const lev = (id === 'Photography') ? 3 : 2;
     history.pushState({page: id, level: lev}, '')
     histack.push({page: id, level: lev});
     console.log(histack);
 
     if (id === 'Art') {
-      $('#content')[0].innerHTML += `<div class="subitem" class="item" onclick="toggletab('Photography', false);"><img class="icon" src="icon/Folder.png"><span class="section">Photography</span></div>`;
+      const div = document.createElement('div');
+      div.classList.add('subitem', 'item');
+      div.setAttribute('onclick', 'toggletab("Photography", false)');
+
+      const f = document.createElement('img');
+      f.setAttribute('class', 'icon');
+      f.setAttribute('src', 'icon/Folder.png');
+
+      const s = document.createElement('span');
+      s.setAttribute('class', 'section');
+      s.innerText = 'Photography';
+
+      div.append(f, s);
+      $('#content').append(div);
     }
     if (id === 'Photography') {
-      $('body').append(`<div class="overlay2"><div class="overlay-content2"><div id="head"><img id="close" src="icon/Close.png" onclick="toggletab('hide2', false)"><span class="title2"></span></div><div id="content2"></div></div></div>`);
+
+      const ddo = document.createElement('div');
+      ddo.setAttribute('class', 'overlay2');
+
+      const ddoc = document.createElement('div');
+      ddoc.setAttribute('class', 'overlay-content2');
+
+      const h = document.createElement('div');
+      h.setAttribute('id', 'head');
+
+      const c = document.createElement('img');
+      c.setAttribute('id', 'close');
+      c.setAttribute('src', 'icon/Close.png');
+      c.setAttribute('onclick', 'toggletab("hide2", false)');
+
+      const t = document.createElement('span');
+      t.setAttribute('class', 'title2');
+
+      const ddc2 = document.createElement('div');
+      ddc2.setAttribute('id', 'content2');
+
+      h.append(c, t);
+      ddoc.append(h, ddc2);
+      ddo.append(ddoc);
+      document.body.append(ddo);
+
       two = '2';
     }
 
     if (id === 'Contact' || id === 'Statement') { $('#content')[0].innerHTML = selected; }
     else {
       for (let i = 0; i < selected.length; i++) {
-        $('#content' + two)[0].innerHTML += `<div class="subitem" class="item" onclick="togglefull('${id}', false, ${i});"><img class="icon" src="icon/${id}.png"><span class="section" id="folder">${selected[i]}</span></div>`;
+        const div = document.createElement('div');
+        div.classList.add('subitem', 'item');
+        div.setAttribute('onclick', `togglefull('${id}', false, ${i})`);
+
+        const f = document.createElement('img');
+        f.setAttribute('class', 'icon');
+        f.setAttribute('src', `icon/${id}.png`);
+
+        const s = document.createElement('span');
+        s.setAttribute('class', 'section');
+        s.setAttribute('id', 'folder')
+        s.innerText = selected[i];
+
+        div.append(f, s);
+        $(`#content${two}`).append(div);
       }
     }
     $('.overlay' + two).css('display', 'block');
@@ -117,21 +169,58 @@ togglefull = (id, flag, n = null) => {
 
     pics = true;
 
-    $('#content-full').append('<div class="pic-container"></div>');
+    const pc = document.createElement('div');
+    pc.setAttribute('class', 'pic-container');
+    $('#content-full').append(pc);
 
     if (Array.isArray(captblurb)) {
       for (let i = 0; i < l; i++) {
-        $('.pic-container')[0].innerHTML += `<div class="work"><div class="piece"><img onclick="fullsize(this.src, ${i})" class="gallery" src="img/${selected}/${i}.jpg"></div><span class="small">${captblurb[i]}</span></div>`;
+
+        const w = document.createElement('div');
+        w.setAttribute('class', 'work');
+
+        const p = document.createElement('div');
+        p.setAttribute('class', 'piece');
+
+        const img = document.createElement('img');
+        img.setAttribute('onclick', `fullsize(this.src, ${i})`);
+        img.setAttribute('class', 'gallery');
+        img.setAttribute('src', `img/${selected}/${i}.jpg`);
+
+        const s = document.createElement('span');
+        s.setAttribute('class', 'small');
+        s.innerHTML = captblurb[i];
+
+        p.append(img);
+        w.append(p, s);
+        $('.pic-container').append(w);
       }
     }
     else {
       if (captblurb.length > 0) {
-        $('#content-full').prepend(`<div id="blurb">${captblurb}</div>`);
+        const bd = document.createElement('div');
+        bd.setAttribute('id', 'blurb');
+        bd.innerHTML = captblurb;
+        $('#content-full').prepend(bd);
+
         blurb = true;
       }
       if (l) {
         for (let i = 0; i < l; i++) {
-          $('.pic-container')[0].innerHTML += `<div class="work"><div class="piece"><img onclick="fullsize(this.src, ${i})" class="gallery" src="img/${selected}/${i}.jpg"></div></div>`;
+          const w = document.createElement('div');
+          w.setAttribute('class', 'work');
+
+          const p = document.createElement('div');
+          p.setAttribute('class', 'piece');
+
+          const img = document.createElement('img');
+          img.setAttribute('onclick', `fullsize(this.src, ${i})`);
+          img.setAttribute('class', 'gallery');
+          img.setAttribute('src', `img/${selected}/${i}.jpg`);
+
+          p.append(img);
+          w.append(p);
+          $('.pic-container').append(w);
         }
       }
       else {
@@ -148,7 +237,34 @@ togglefull = (id, flag, n = null) => {
 fullsize = (i) => {
   const s = i.split('/');
   const si = TEXTS.sizes[s[s.length - 2]];
-  $('body').append(`<div class="fullscreen"><img src="icon/Close.png" onclick="this.parentElement.remove();" class="arrows" id="exit"><img src="icon/Left.png" onclick="move('left', ${si});" class="arrows" id="left"><img src="icon/Right.png" onclick="move('right', ${si});" class="arrows" id="right"><img src="${i}" id="fullimage"></div>`);
+
+  const cb = document.createElement('img');
+  cb.setAttribute('src', 'icon/Close.png');
+  cb.setAttribute('onclick', 'this.parentElement.remove()');
+  cb.setAttribute('class', 'arrows');
+  cb.setAttribute('id', 'exit');
+
+  const lb = document.createElement('img');
+  lb.setAttribute('src', 'icon/Left.png');
+  lb.setAttribute('onclick', `move('left', ${si})`);
+  lb.setAttribute('class', 'arrows');
+  lb.setAttribute('id', 'left');
+
+  const rb = document.createElement('img');
+  rb.setAttribute('src', 'icon/Right.png');
+  rb.setAttribute('onclick', `move('right', ${si})`);
+  rb.setAttribute('class', 'arrows');
+  rb.setAttribute('id', 'right');
+
+  const fi = document.createElement('img');
+  fi.setAttribute('src', `${i}`);
+  fi.setAttribute('id', 'fullimage');
+
+  const div = document.createElement('div');
+  div.setAttribute('class', 'fullscreen');
+
+  div.append(cb, lb, rb, fi);
+  document.body.append(div);
 }
 
 // move left or right through fullsize images
