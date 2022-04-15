@@ -157,7 +157,8 @@ togglefull = (id, flag, n = null) => {
     const title = Array.isArray(TEXTS[id]) ? TEXTS[id][n] : id;
     let selected = title.replace(/\s/g, '');
     if (selected === '120') { selected = '_120'; }
-    else if (selected === 'Tiana/Time') { selected = title.replace(/[\/]/, ''); }
+    else if (selected === 'Tiana/Time') { selected = 'TianaTime'; }
+    else if (selected === '"Neighbor-hood"') { selected = 'Neighborhood'; }
     const captblurb = TEXTS[selected];
     const l = TEXTS.sizes[selected];
 
@@ -216,6 +217,7 @@ togglefull = (id, flag, n = null) => {
           const img = document.createElement('img');
           img.setAttribute('onclick', `fullsize(this.src, ${i})`);
           img.setAttribute('class', 'gallery');
+
           img.setAttribute('src', `img/${selected}/${i}.jpg`);
 
           p.append(img);
