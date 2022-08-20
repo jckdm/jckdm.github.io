@@ -61,4 +61,4 @@ const TEXTS = {
   Portraits: '',
   StillLife: '',
   Street: ''
-}
+};

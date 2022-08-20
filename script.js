@@ -1,45 +1,51 @@
-// stack to emulate/follow window.history
-let histack = [];
+const INDICES = {
+  DigitalDistancing: 0,
+  Tiled: 1,
+  TianaTime: 2,
+  Screensavers: 3,
+  CSSParser: 4,
+  DollHouse: 0,
+  Dreaming: 1,
+  EsheteWoldeyilma: 2,
+  120: 3,
+  Portraits: 4,
+  StillLife: 5,
+  Street: 6,
+  Painting: 0,
+  Drawing: 1,
+  Sculpture: 2,
+  StreetArt: 3,
+  Zine: 0,
+  TheWinterSocial: 1,
+  Chapbook: 2,
+  Neighborhood: 3,
+  FilmTranslation: 4,
+  HowtoSayGoodbyetoaStranger: 0,
+  WeHaveSeentheBestofOurTimes: 1
+};
 
-// handle nav between levels via browser back arrow
 $(() => {
-  history.pushState({page: 'Home', level: 1}, '');
-  histack.push({page: 'Home', level: 1});
-  console.log(histack);
+  const url = window.location.href.split('?');
+  const levels = url.length;
 
-  $(window).on('popstate', () => {
-    const prev = histack.pop();
-
-    console.log(histack);
-    console.log(prev.level, ' --> ', history.state.level);
-
-    if (prev.level === 1 && history.state.level === 2) {
-      toggletab(history.state.page, true);
+  if (levels == 2) {
+    toggletab(url[1], 'false');
+  }
+  else if (levels == 3) {
+    if (url[2] === 'Photography') {
+      toggletab(url[1], 'false');
+      toggletab(url[2], 'false');
     }
-    else if (prev.level === 2 && history.state.level === 3) {
-      toggletab(history.state.page, true);
+    else {
+      toggletab(url[1], 'false');
+      togglefull(url[1], 'false', INDICES[url[2]]);
     }
-    else if (prev.level === 2 && history.state.level === 4) {
-      togglefull(history.state.page, true);
-    }
-    else if (prev.level === 3 && history.state.level === 4) {
-      togglefull(history.state.page, true);
-    }
-
-    else if (prev.level === 2 && history.state.level === 1) {
-      toggletab('hide', true);
-    }
-    else if (prev.level === 3 && history.state.level === 2) {
-      toggletab('hide2', true);
-    }
-    else if (prev.level === 4 && history.state.level === 2) {
-      togglefull('hide', true);
-    }
-    else if (prev.level === 4 && history.state.level === 3) {
-      togglefull('hide', true);
-    }
-  });
-
+  }
+  else if (levels == 4) {
+    toggletab(url[1], 'false');
+    toggletab(url[2], 'false');
+    togglefull(url[2], 'false', INDICES[url[3]]);
+  }
 })
 
 // hide / show first-level folders
@@ -48,20 +54,20 @@ toggletab = (id, flag) => {
     $('#content').scrollTop(0);
     $('#content')[0].innerHTML = '';
     $('.overlay').css('display', 'none');
-    if (!flag) { history.back(); }
+
+    window.history.replaceState({id: id}, '', `/`);
   }
   else if (id === 'hide2') {
     $('.overlay2').remove();
-    if (!flag) { history.back(); }
+    window.history.pushState({}, '', `?Art`);
   }
   else {
     const selected = TEXTS[id];
     let two = '';
 
     const lev = (id === 'Photography') ? 3 : 2;
-    history.pushState({page: id, level: lev}, '')
-    histack.push({page: id, level: lev});
-    console.log(histack);
+
+    window.history.pushState({}, '', `?${id}`);
 
     if (id === 'Art') {
       const div = document.createElement('div');
@@ -70,7 +76,7 @@ toggletab = (id, flag) => {
 
       const f = document.createElement('img');
       f.setAttribute('class', 'icon');
-      f.setAttribute('src', 'icon/Folder.png');
+      f.setAttribute('src', '/icon/Folder.png');
 
       const s = document.createElement('span');
       s.setAttribute('class', 'section');
@@ -92,7 +98,7 @@ toggletab = (id, flag) => {
 
       const c = document.createElement('img');
       c.setAttribute('id', 'close');
-      c.setAttribute('src', 'icon/Close.png');
+      c.setAttribute('src', '/icon/Close.png');
       c.setAttribute('onclick', 'toggletab("hide2", false)');
 
       const t = document.createElement('span');
@@ -107,6 +113,8 @@ toggletab = (id, flag) => {
       document.body.append(ddo);
 
       two = '2';
+
+      window.history.pushState({}, '', '?Art?Photography');
     }
 
     if (id === 'Contact' || id === 'Statement') { $('#content')[0].innerHTML = selected; }
@@ -118,7 +126,7 @@ toggletab = (id, flag) => {
 
         const f = document.createElement('img');
         f.setAttribute('class', 'icon');
-        f.setAttribute('src', `icon/${id}.png`);
+        f.setAttribute('src', `/icon/${id}.png`);
 
         const s = document.createElement('span');
         s.setAttribute('class', 'section');
@@ -147,10 +155,17 @@ togglefull = (id, flag, n = null) => {
       $('#blurb')[0].remove();
       blurb = false;
     }
-    if (!flag) { history.back(); }
 
     $('#content-full').scrollTop(0);
     $('.overlay-full').css('display', 'none');
+
+    const url = window.location.href.split('?');
+    const win = url[url.length - 2];
+
+    if (win === 'Photography') {
+      window.history.pushState({}, '', `?Art?Photography`);
+    }
+    else { window.history.pushState({}, '', `?${win}`); }
   }
   else {
     // if opening for first time, index into array, otherwise use given id
@@ -161,10 +176,6 @@ togglefull = (id, flag, n = null) => {
     else if (selected === '"Neighbor-hood"') { selected = 'Neighborhood'; }
     const captblurb = TEXTS[selected];
     const l = TEXTS.sizes[selected];
-
-    history.pushState({page: title, level: 4}, '');
-    histack.push({page: title, level: 4});
-    console.log(histack);
 
     if (selected === '_120') { selected = '120'; }
 
@@ -232,6 +243,9 @@ togglefull = (id, flag, n = null) => {
     }
     $('.overlay-full').css('display', 'block');
     $('.title-full')[0].innerHTML = title;
+
+    if (id === 'Photography') { window.history.pushState({}, '', `?Art?Photography?${selected}`); }
+    else { window.history.pushState({}, '', `?${id}?${selected}`); }
   }
 }
 
@@ -241,19 +255,19 @@ fullsize = (i) => {
   const si = TEXTS.sizes[s[s.length - 2]];
 
   const cb = document.createElement('img');
-  cb.setAttribute('src', 'icon/Close.png');
+  cb.setAttribute('src', '/icon/Close.png');
   cb.setAttribute('onclick', 'this.parentElement.remove()');
   cb.setAttribute('class', 'arrows');
   cb.setAttribute('id', 'exit');
 
   const lb = document.createElement('img');
-  lb.setAttribute('src', 'icon/Left.png');
+  lb.setAttribute('src', '/icon/Left.png');
   lb.setAttribute('onclick', `move('left', ${si})`);
   lb.setAttribute('class', 'arrows');
   lb.setAttribute('id', 'left');
 
   const rb = document.createElement('img');
-  rb.setAttribute('src', 'icon/Right.png');
+  rb.setAttribute('src', '/icon/Right.png');
   rb.setAttribute('onclick', `move('right', ${si})`);
   rb.setAttribute('class', 'arrows');
   rb.setAttribute('id', 'right');
@@ -288,7 +302,7 @@ let light = true;
 // toggle light -> dark mode
 mode = () => {
   let f = light ? 'styles-dark.css' : 'styles-light.css';
-  let b = light ? 'icon/White-Bomb.png' : 'icon/Black-Bomb.png';
+  let b = light ? '/icon/White-Bomb.png' : '/icon/Black-Bomb.png';
   $('#css').attr('href', f);
   $('#mode').attr('src', b);
   light = !light;
