@@ -145,6 +145,7 @@ span { font-size: 20px; }
   top: 50%;
   transform: translate(-50%, -50%);
   color: #FFFAF0;
+  padding-top: 7.5px;
 }
 
 .piece { height: 200px; }
@@ -242,6 +243,7 @@ span { font-size: 20px; }
 #exit { top: 0; width: 35px; }
 
 @media only screen and (max-width: 768px) {
+  .title, .title-full, .title2 { font-size: 18px; }
   .subitem {
     display: flex;
     align-items: center;
@@ -249,8 +251,9 @@ span { font-size: 20px; }
   }
 }
 
-@media only screen and (max-width: 414px) {
-  span { font-size: 18px; }
+@media only screen and (max-width: 428px) {
+  span { font-size: 17px; }
+  p { font-size: 15px; }
   .item {
     width: 100px;
     margin: 50px 10px;
@@ -261,4 +264,22 @@ span { font-size: 20px; }
     height: 75%;
   }
   .subitem { margin: 10px; }
+  #dir {
+    font-size: 26px;
+    top: 12px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  span { font-size: 16px; }
+  p { font-size: 14px; }
+  .item {
+    width: 75px;
+    margin: 45px 7.5px;
+  }
+  .subitem { margin: 7.5px; }
+  #dir {
+    font-size: 21px;
+    top: 15px;
+  }
 }
