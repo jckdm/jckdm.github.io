@@ -1,6 +1,7 @@
 a, a:visited { color: #0000FF; }
 
-#topmenu, .section { background-color: #FFFAF0; }
+#topmenu, .item .section { background-color: #FFFAF0; }
+#content .section, #content2 .section { background-color: #FFFFFF; }
 
 #dir, p, span, text, #blurb { color: #262626; }
 
