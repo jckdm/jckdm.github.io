@@ -56,10 +56,12 @@ toggletab = (id, flag) => {
     $('.overlay').css('display', 'none');
 
     window.history.replaceState({id: id}, '', `/`);
+    $('#dir').text('jackadam/');
   }
   else if (id === 'hide2') {
     $('.overlay2').remove();
     window.history.pushState({}, '', `?Art`);
+    $('#dir').text('jackadam/Art');
   }
   else {
     const selected = TEXTS[id];
@@ -68,6 +70,7 @@ toggletab = (id, flag) => {
     const lev = (id === 'Photography') ? 3 : 2;
 
     window.history.pushState({}, '', `?${id}`);
+    $('#dir').text(`jackadam/${id}`);
 
     if (id === 'Art') {
       const div = document.createElement('div');
@@ -115,6 +118,7 @@ toggletab = (id, flag) => {
       two = '2';
 
       window.history.pushState({}, '', '?Art?Photography');
+      $('#dir').text('jackadam/Art/Photography');
     }
 
     if (id === 'Contact' || id === 'Statement') { $('#content')[0].innerHTML = selected; }
@@ -164,8 +168,12 @@ togglefull = (id, flag, n = null) => {
 
     if (win === 'Photography') {
       window.history.pushState({}, '', `?Art?Photography`);
+      $('#dir').text('jackadam/Art/Photography');
     }
-    else { window.history.pushState({}, '', `?${win}`); }
+    else {
+      window.history.pushState({}, '', `?${win}`);
+      $('#dir').text(`jackadam/${win}`);
+    }
   }
   else {
     // if opening for first time, index into array, otherwise use given id
