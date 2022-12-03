@@ -205,7 +205,13 @@ togglefull = (id, flag, n = null) => {
         const img = document.createElement('img');
         img.setAttribute('onclick', `fullsize(this.src, ${i})`);
         img.setAttribute('class', 'gallery');
-        img.setAttribute('src', `img/${selected}/${i}.jpg`);
+
+        if (selected == 'Sculpture' && i == 2) {
+          img.setAttribute('src', `img/${selected}/${i}.gif`);
+        }
+        else {
+          img.setAttribute('src', `img/${selected}/${i}.jpg`);
+        }
 
         const s = document.createElement('span');
         s.setAttribute('class', 'small');

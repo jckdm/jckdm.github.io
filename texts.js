@@ -1,7 +1,7 @@
 const TEXTS = {
   // number of photos in each gallery
   sizes: {
-      Painting: 9, Drawing: 9, Sculpture: 6, StreetArt: 8,
+      Painting: 9, Drawing: 10, Sculpture: 6, StreetArt: 8,
       DollHouse: 20, Dreaming: 12, EsheteWoldeyilma: 13, _120: 9, Portraits: 10, StillLife: 15, Street: 10,
       Chapbook: 6, Zine: 7, FilmTranslation: 5, Neighborhood: 6, TheWinterSocial: 9,
       DigitalDistancing: 9, Tiled: 7, TianaTime: 11, Screensavers: 4, CSSParser: 2
@@ -29,7 +29,7 @@ const TEXTS = {
   Sculpture: [
     '<i>Fixing a Hole</i>, 2019<br>48 x 16 in.<br>Candle wax on wood',
     '<i>Index</i>, 2021<br>15 x 21 in.<br>Ink, cardstock, book pages, wood, acrylic, glue, nails',
-    '<i>Urn</i>, 2022<br>6.5 x 3 in.<br>Resin, Chuckles Minis in glass jar',
+    '<i>A Box Of Chuckles For My Father</i>, 2022<br>6.5 x 3 in.<br>Resin, Chuckles Minis, glass jar',
     '<i>Sidetable</i>, 2019<br>18.5 x 24 in.<br>Pine, ash, brass, resin',
     '<i>Cerulean (Light)</i>, 2019<br>33 x 22 in.<br>Acrylic, wall paint, thread, nails, superglue on canvas',
     '<i>Solar Storm Above the Spanish Empire</i>, 2018<br>49 x 14 in.<br>Dye, embroidery, blood, paper ticket on unprimed canvas'
