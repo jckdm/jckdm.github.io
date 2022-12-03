@@ -243,7 +243,12 @@ togglefull = (id, flag, n = null) => {
           img.setAttribute('onclick', `fullsize(this.src, ${i})`);
           img.setAttribute('class', 'gallery');
 
-          img.setAttribute('src', `img/${selected}/${i}.jpg`);
+          if (selected == 'Screensavers') {
+            img.setAttribute('src', `img/${selected}/${i}.gif`);
+          }
+          else {
+            img.setAttribute('src', `img/${selected}/${i}.jpg`);
+          }
 
           p.append(img);
           w.append(p);
