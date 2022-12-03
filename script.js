@@ -243,7 +243,7 @@ togglefull = (id, flag, n = null) => {
           img.setAttribute('onclick', `fullsize(this.src, ${i})`);
           img.setAttribute('class', 'gallery');
 
-          if (selected == 'Screensavers') {
+          if (selected == 'Screensavers' || (selected == 'Tiled' && i == 5)) {
             img.setAttribute('src', `img/${selected}/${i}.gif`);
           }
           else {
@@ -313,7 +313,8 @@ move = (d, s) => {
   }
   else { i = (i + 1) % s; }
 
-  $('#fullimage')[0].src = `${p.join('/')}/${i}.jpg`;
+  const pics = document.getElementsByClassName('gallery');
+  $('#fullimage')[0].src = pics[i].src;
 }
 
 let light = true;
