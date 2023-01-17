@@ -1,9 +1,10 @@
 const INDICES = {
   DigitalDistancing: 0,
   Tiled: 1,
-  TianaTime: 2,
-  Screensavers: 3,
-  CSSParser: 4,
+  Masterpiece: 2,
+  TianaTime: 3,
+  Screensavers: 4,
+  CSSParser: 5,
   DollHouse: 0,
   Dreaming: 1,
   EsheteWoldeyilma: 2,
