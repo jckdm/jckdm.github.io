@@ -30,15 +30,20 @@ $(() => {
   const cleanurl = rawurl.replace('%3F', '?');
 
   let newurl = cleanurl;
+  let fbclid = false;
 
   if (cleanurl.includes('fbclid=')) {
     const fbind = cleanurl.indexOf('fbclid=');
     newurl = cleanurl.substring(0, fbind - 1);
+    fbclid = true;
   }
 
   const url = newurl.split('?');
   const levels = url.length;
 
+  if (fbclid && levels == 1) {
+    location.replace(newurl);
+  }
   if (levels == 2) {
     toggletab(url[1], 'false');
   }
