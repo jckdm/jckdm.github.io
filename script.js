@@ -26,7 +26,17 @@ const INDICES = {
 };
 
 $(() => {
-  const url = window.location.href.split('?');
+  const rawurl = window.location.href;
+  const cleanurl = rawurl.replace('%3F', '?');
+
+  let newurl = cleanurl;
+
+  if (cleanurl.includes('fbclid=')) {
+    const fbind = cleanurl.indexOf('fbclid=');
+    newurl = cleanurl.substring(0, fbind - 1);
+  }
+
+  const url = newurl.split('?');
   const levels = url.length;
 
   if (levels == 2) {
