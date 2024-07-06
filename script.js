@@ -13,7 +13,7 @@ const INDICES = {
   StillLife: 5,
   Street: 6,
   Painting: 0,
-  Drawing: 1,
+  'Drawing<NSWF>': 1,
   Sculpture: 2,
   StreetArt: 3,
   Zine: 0,
@@ -198,6 +198,7 @@ togglefull = (id, flag, n = null) => {
     if (selected === '120') { selected = '_120'; }
     else if (selected === 'Tiana/Time') { selected = 'TianaTime'; }
     else if (selected === '"Neighbor-hood"') { selected = 'Neighborhood'; }
+    else if (selected === 'Drawing<NSFW>') { selected = 'Drawing'; }
     const captblurb = TEXTS[selected];
     const l = TEXTS.sizes[selected];
 
