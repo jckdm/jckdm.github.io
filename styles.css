@@ -24,6 +24,9 @@
 
 body { font-family: Times-LT, Times, serif; }
 
+table { width: 100%; }
+table, th, td { border:1px solid #000000; }
+
 #subscreen { z-index: 1; }
 #screen { z-index: 2; }
 .container, #topmenu { z-index: 3; }

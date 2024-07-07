@@ -137,7 +137,8 @@ toggletab = (id, flag) => {
       $('#dir').text('jackadam/Art/Photography');
     }
 
-    if (id === 'Contact' || id === 'Statement') { $('#content')[0].innerHTML = selected; }
+    if (id === 'Contact' || id === 'Resume' || id === 'Statement') { $('#content')[0].innerHTML = selected; }
+
     else {
       for (let i = 0; i < selected.length; i++) {
         const div = document.createElement('div');
