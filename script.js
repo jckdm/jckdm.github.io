@@ -16,11 +16,13 @@ const INDICES = {
   'Drawing<NSWF>': 1,
   Sculpture: 2,
   StreetArt: 3,
-  Zine: 0,
-  TheWinterSocial: 1,
-  Chapbook: 2,
+  TheWinterSocial: 0,
+  Chapbook: 1,
+  PictureMe: 2,
   Neighborhood: 3,
-  FilmTranslation: 4,
+  Zine: 4,
+  'No.273': 5,
+  FilmTranslation: 6,
   HowtoSayGoodbyetoaStranger: 0,
   WeHaveSeentheBestofOurTimes: 1
 };
