@@ -1,7 +1,7 @@
 const TEXTS = {
   // number of photos in each gallery
   sizes: {
-      Painting: 9, Drawing: 16, Sculpture: 6, StreetArt: 8,
+      Painting: 9, Drawing: 12, Sculpture: 6, StreetArt: 8,
       DollHouse: 20, Dreaming: 12, EsheteWoldeyilma: 13, _120: 9, Portraits: 10, StillLife: 15, Street: 10,
       TheWinterSocial: 13, Chapbook: 6, PictureMe: 10, Neighborhood: 6, Zine: 7, 'No.273': 6, FilmTranslation: 5,
       DigitalDistancing: 9, Tiled: 6, Masterpiece: 8, TianaTime: 11, Screensavers: 4, CSSParser: 2
