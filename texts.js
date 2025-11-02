@@ -4,7 +4,7 @@ const TEXTS = {
       Painting: 10, Drawing: 11, Sculpture: 8, StreetArt: 8,
       DollHouse: 20, Dreaming: 13, EsheteWoldeyilma: 13, _120: 9, Portraits: 10, StillLife: 15, Street: 10,
       TheWinterSocial: 13, Chapbook: 6, PictureMe: 10, Neighborhood: 6, Zine: 7, 'No.273': 6, FilmTranslation: 5,
-      DigitalDistancing: 9, Tiled: 6, HallPass: 6, Masterpiece: 8, TianaTime: 11, Screensavers: 4, CSSParser: 2
+      DigitalDistancing: 9, Tiled: 6, HallPass: 8, Masterpiece: 8, TianaTime: 11, Screensavers: 4, CSSParser: 2
   },
 
   Tech: ['Digital Distancing', 'Tiled', 'Hall Pass', 'Masterpiece', 'Tiana/Time', 'Screensavers', 'CSS Parser'],
