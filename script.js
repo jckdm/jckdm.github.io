@@ -1,10 +1,11 @@
 const INDICES = {
   DigitalDistancing: 0,
   Tiled: 1,
-  Masterpiece: 2,
-  TianaTime: 3,
-  Screensavers: 4,
-  CSSParser: 5,
+  HallPass: 2,
+  Masterpiece: 3,
+  TianaTime: 4,
+  Screensavers: 5,
+  CSSParser: 6,
   DollHouse: 0,
   Dreaming: 1,
   EsheteWoldeyilma: 2,
@@ -263,7 +264,7 @@ togglefull = (id, flag, n = null) => {
           img.setAttribute('onclick', `fullsize(this.src, ${i})`);
           img.setAttribute('class', 'gallery');
 
-          if (selected == 'Screensavers' || (selected == 'Tiled' && i == 5)) {
+          if (selected == 'Screensavers' || (selected == 'Tiled' && i == 5) || (selected == 'HallPass' && i == 1)) {
             img.setAttribute('src', `img/${selected}/${i}.gif`);
           }
           else {
